@@ -1,0 +1,260 @@
+/* 
+    Created on : September 27, 2016, 
+    Author     : John R. Pepp
+*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, textarea, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block; }
+
+body {
+    line-height: 1; }
+
+ol, ul {
+    list-style: none; }
+
+blockquote, q {
+    quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none; }
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0; }
+
+.container {
+    /* * For IE 6/7 only * Include this rule to trigger hasLayout and contain floats. */
+    *zoom: 1;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box; }
+
+.container:after {
+    clear: both; }
+
+.container:before,
+.container:after {
+    content: " ";
+    display: table; }
+
+.row {
+    /* * For IE 6/7 only * Include this rule to trigger hasLayout and contain floats. */
+    *zoom: 1; }
+
+.row:after {
+    clear: both; }
+
+.row:before,
+.row:after {
+    content: " ";
+    display: table; }
+
+[class^="span"] {
+    float: left;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    /* Firefox */ }
+
+[class^="span"]:first-child {
+    margin-left: 0; }
+
+.span1 {
+    width: 8.333333333333332%; }
+
+.span2 {
+    width: 16.666666666666664%; }
+
+.span3 {
+    width: 25%; }
+
+.span4 {
+    width: 33.33333333333333%; }
+
+.span5 {
+    width: 41.66666666666667%; }
+
+.span6 {
+    width: 50%; }
+
+.span7 {
+    width: 58.333333333333336%; }
+
+.span8 {
+    width: 66.66666666666666%; }
+
+.span9 {
+    width: 75%; }
+
+.span10 {
+    width: 83.33333333333334%; }
+
+.span11 {
+    width: 91.66666666666666%; }
+
+.span12 {
+    width: 100%; }
+
+[class^="m-span"] {
+    padding: 10px 0;
+    margin-left: 3.125%;
+    float: left;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    /* Firefox */ }
+
+[class^="m-span"]:first-child {
+    margin-left: 0; }
+
+.m-span1 {
+    width: 5.46875%; }
+
+.m-span2 {
+    width: 14.0625%; }
+
+.m-span3 {
+    width: 22.65625%; }
+
+.m-span4 {
+    width: 31.25%; }
+
+.m-span5 {
+    width: 39.84375%; }
+
+.m-span6 {
+    width: 48.4375%; }
+
+.m-span7 {
+    width: 57.03125%; }
+
+.m-span8 {
+    width: 65.625%; }
+
+.m-span9 {
+    width: 74.21875%; }
+
+.m-span10 {
+    width: 82.8125%; }
+
+.m-span11 {
+    width: 91.40625%; }
+
+.m-span12 {
+    width: 100%; }
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; }
+
+/* GENERAL PAGE STYLING */
+body {
+    font-size: 100%;
+    background-color: #A0D7E2; }
+
+header.headingStyle {
+    height: 150px;
+    background-color: #FC9E00; }
+header.headingStyle h1 {
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-size: 3.2rem;
+    line-height: 150px;
+    color: #FFFFFF;
+    text-align: center; }
+
+div.mainContent {
+    background-color: #FFFFFF;
+    padding: 20px; }
+div.mainContent .mainGame {
+    display: block;
+    width: 100%;
+    max-width: 800px;
+    height: 800px;
+    border: 2px solid #2e2e2e;
+    background-color: rgba(252, 158, 0, 0.6);
+    padding: 20px;
+    margin: 0 auto; }
+div.mainContent .mainGame .questStyle {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: 160px;
+    background-color: #FBFCF7;
+    padding: 15px; }
+div.mainContent .mainGame .questStyle h3 {
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-size: 1.4rem;
+    color: #633e00; }
+div.mainContent .mainGame [class^="answer"] {
+    display: block;
+    width: 100%;
+    height: 80px;
+    background-color: #965e00;
+    border-top: 2px solid #2e2e2e;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.4rem;
+    line-height: 60px;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 10px 20px; }
+div.mainContent .mainGame .scoreboard {
+    clear: both;
+    display: block;
+    width: auto;
+    height: 50px; }
+div.mainContent .mainGame .scoreboard .stopwatch, div.mainContent .mainGame .scoreboard .scoreBox {
+    height: 50px;
+    border: 2px solid #2e2e2e;
+    background-color: #FBFCF7; }
+div.mainContent .mainGame .scoreboard .stopwatch p.countdownClock, div.mainContent .mainGame .scoreboard .stopwatch p.score, div.mainContent .mainGame .scoreboard .scoreBox p.countdownClock, div.mainContent .mainGame .scoreboard .scoreBox p.score {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    line-height: 50px;
+    color: #965e00;
+    text-align: center; }
+div.mainContent .mainGame .nextBtnBox {
+    display: block;
+    width: 100%;
+    height: 50px; }
+div.mainContent .mainGame .nextBtnBox .nextBtn {
+    cursor: pointer;
+    outline: none;
+    border: none;
+    width: 100%;
+    height: 50px;
+    background-color: #965e00;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #FFFFFF; }
+div.mainContent .mainGame .nextBtnBox .nextBtn:hover {
+    background-color: #006300; }
