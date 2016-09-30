@@ -16,42 +16,47 @@ President John R Pepp
     </head>
     <body>
         <header class="container headingStyle">
-            <h1>Pepster's Trivia Game</h1>
+            <h2 class="logo"><span>Pepster's Place - Circle of Life</span> <a href="https://www.pepster.com"></a></h2>
         </header>
         <div class="container mainContent">
-
-
-            <div class="mainGame">
-                <!-- The Question that is pulled in from PHP and jQuery -->
-                <div class="questStyle">
-                    <h3 class="displayQuest">&nbsp;</h3>
-                </div>
-                <!-- The Possible Answers that is also pulled in from PHP and jQuery -->
-                <ol class="possibleAnswers">
-                    <li><a id="answer1" class="answer1 row span12 clicked" href="" data-answer="1"></a></li>
-                    <li><a id="answer2" class="answer2 row span12 clicked" href="" data-answer="2"></a></li>
-                    <li><a id="answer3" class="answer3 row span12 clicked" href="" data-answer="3"></a></li>
-                    <li><a id="answer4" class="answer4 row span12 clicked" href="" data-answer="4"></a></li>
-                </ol>
-
-                <div class="scoreboard">
-                    <!-- The Countdown Counter done in jQuery -->
-                    <div class="span6 stopwatch">
-                        <p class="countdownClock">Timer: <span class="timer"></span></p>
+            <div class="span6 gameBackground">
+                <div class="mainGame">
+                    <!-- The Question that is pulled in from PHP and jQuery -->
+                    <div class="questStyle">
+                        <h3 class="displayQuest">&nbsp;</h3>
                     </div>
-                    <!-- The Score done in jQuery -->
-                    <div class="span6 scoreBox">
-                        <p class="score">Score: <span class="totalPoints"></span> </p>
-                    </div> 
+                    <!-- The Possible Answers that is also pulled in from PHP and jQuery -->
+                    <ol class="possibleAnswers">
+                        <li><a id="answer1" class="answer1 row span12 clicked" href="" data-answer="1"></a></li>
+                        <li><a id="answer2" class="answer2 row span12 clicked" href="" data-answer="2"></a></li>
+                        <li><a id="answer3" class="answer3 row span12 clicked" href="" data-answer="3"></a></li>
+                        <li><a id="answer4" class="answer4 row span12 clicked" href="" data-answer="4"></a></li>
+                    </ol>
 
-                </div>
-                <div class="nextBtnBox">
-                    <button class="nextBtn">Next Question</button>
-                </div>
+                    <div class="scoreboard">
+                        <!-- The Countdown Counter done in jQuery -->
+                        <div class="stopwatch">
+                            <p class="countdownClock">Timer: <span class="timer"></span></p>
+                        </div>
+                        <!-- The Score done in jQuery -->
+                        <div class="scoreBox">
+                            <p class="score">Score: <span class="totalPoints"></span> </p>
+                        </div> 
 
+                    </div>
+                    <div class="nextBtnBox">
+                        <button class="nextBtn">Next Question</button>
+                    </div>
+                </div>
             </div>
-
-            <script src="javascript/jquery-1.10.2.min.js"></script>
+            <article class="span6 gameDescription">
+                <h1 class="demoHeading">Trivia Game Demo</h1>
+                <hr>
+                <br>
+                <p class="demoParagraph">I originally wrote this game in Flash Actionscript 3.0 about 5 to 6 years ago and about 2 years ago I started to convert it over to PHP. I eventually added JQuery, Ajax and JSON to the game in order to have more of a dynamic experience. I have future modifications in mind for this trivia game. Some of the modifications is having the ability to add, edit and delete questions/answer directly from a web browser. This will give the system administrator and users the ability to add questions/answers directly to the database's table remotely. I also want to add a high score table and each day have a winner. I'm am thinking that the winner of the day will have the ability to add questions/answers to the quiz giving the incentive to comeback tomorrow to play.</p>
+                <p class="demoParagraph">All the current games files and the respective directories can be found at <a href="https://github.com/Strider64/Trivia-Quiz-PHP-JQuery-Game" target="_blank">Github</a>. Feel free to use all of the files as is or with modifications, but all I ask is that you give me credit for the game itself. Just inserting the credit inside the code somewhere will be enough for me. Even if you don't use any of the code in your own project I hope this will help you out in the long run.</p>
+            </article>
+            <script src="javascript/jquery-3.1.1.min.js"></script>
             <script src="javascript/game_play_01.js"></script>
         </div>
     </body>
