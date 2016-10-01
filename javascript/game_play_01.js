@@ -6,7 +6,7 @@ $(function () {
             timer = null,
             $timerAPI = $('.timer'),
             duration = 30,
-            id = null,
+            id = 1,
             correct = 0,
             score = 0,
             points = 100,
@@ -120,6 +120,7 @@ $(function () {
                 displayScore(score);
                 clearInterval(timer);
                 currentQuestion += 1;
+                id = currentQuestion;
                 if (currentQuestion <= totalQuestions) {
                     $checkAns.off('click', check_answer);
                     $nextBtn.slideDown(500);
@@ -152,6 +153,7 @@ $(function () {
                 myTimer(duration);
                 //console.log(data);
                 id = data.id;
+                console.log(data.id, data.q_num);
                 $('h3.displayQuest').text(data.question);
                 //$('h3.displayQuest').text(data.q_num + ". " + data.question);
                 $('a.answer1').text(data.answer1);
