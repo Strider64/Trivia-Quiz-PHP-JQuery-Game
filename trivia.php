@@ -1,5 +1,6 @@
 <?php
 require_once 'includes/utilities.inc.php';
+$quizDate = new DateTime("Now", new DateTimeZone("America/Detroit"));
 ?>
 <!DOCTYPE html>
 <!--
@@ -21,6 +22,9 @@ President John R Pepp
         <div class="container mainContent">
             <div class="span6 gameBackground">
                 <div class="mainGame">
+                    <div class="quizHeading">
+                        <h1 class="quizTitle">Pepster's Trivia Game<span class="todaysDate"><?= $quizDate->format("F j, Y"); ?></span></h1>
+                    </div>
                     <!-- The Question that is pulled in from PHP and jQuery -->
                     <div class="questStyle">
                         <h3 class="displayQuest">&nbsp;</h3>
