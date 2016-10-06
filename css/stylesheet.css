@@ -181,9 +181,34 @@ body {
   font-size: 100%;
   background-color: #A0D7E2; }
 
+/* LOGO STYLING */
+h2.logo {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 30px;
+  width: 100%;
+  max-width: 79px;
+  height: 100px;
+  background-image: url(../images/img-logo-79x100.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 0;
+  margin: 0; }
+  h2.logo a {
+    display: inline-block;
+    z-index: 100;
+    width: 100%;
+    max-width: 100px;
+    height: 100px;
+    padding: 0;
+    margin: 0; }
+  h2.logo span {
+    display: none; }
+
 header.headingStyle {
   position: relative;
-  height: 200px;
+  height: 100px;
   background-color: #000000; }
   header.headingStyle h1 {
     font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
@@ -216,85 +241,113 @@ header.headingStyle {
         text-decoration: none; }
         header.headingStyle .logout span a.logoutLink:hover {
           color: magenta; }
-  header.headingStyle #loginForm {
+  header.headingStyle a.loginBtn {
+    position: absolute;
+    top: 10px;
+    right: 0; }
+    header.headingStyle a.loginBtn img {
+      width: 100%;
+      max-width: 75%;
+      height: 75%; }
+  header.headingStyle a.triviaBtn {
+    -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
     -moz-border-radius: 8px;
     -webkit-border-radius: 8px;
     border-radius: 8px;
+    display: block;
     position: absolute;
-    right: 10px;
-    bottom: 10px;
-    background-color: #965e00;
-    height: 100px;
-    padding: 10px; }
-    header.headingStyle #loginForm fieldset {
-      -moz-border-radius: 8px;
-      -webkit-border-radius: 8px;
-      border-radius: 8px;
-      border: 1px solid #FFFFFF;
-      padding: 10px; }
-    header.headingStyle #loginForm legend {
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 1.2rem;
-      color: #FFFFFF;
-      padding: 0 5px; }
-    header.headingStyle #loginForm label {
-      float: left;
-      display: block;
-      width: 100%;
-      max-width: 90px;
-      height: 30px;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 1.0rem;
-      line-height: 30px;
-      text-align: left;
-      text-transform: capitalize;
-      color: #FFFFFF;
-      padding: 0 7px; }
-    header.headingStyle #loginForm input {
-      float: left;
-      display: block;
-      outline: none;
-      border: none;
-      width: 100%;
-      max-width: 120px;
-      height: 30px;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 1.0rem;
-      padding: 0 5px; }
-    header.headingStyle #loginForm input[type=submit] {
-      -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
-      -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
-      box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
-      -moz-border-radius: 8px;
-      -webkit-border-radius: 8px;
-      border-radius: 8px;
-      border: none;
-      outline: none;
-      float: left;
-      display: block;
-      width: 100%;
-      max-width: 100px;
-      height: 30px;
-      cursor: pointer;
-      background-color: #000000;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 1.0rem;
-      font-weight: bold;
-      text-transform: capitalize;
-      color: #FFFFFF;
-      margin-left: 15px; }
-      header.headingStyle #loginForm input[type=submit]:hover {
-        background-color: #3F4E70; }
-    header.headingStyle #loginForm a {
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 1.2rem;
-      line-height: 30px;
-      color: #FFFFFF;
-      font-weight: bold;
-      text-decoration: none;
-      padding-left: 25px; }
-      header.headingStyle #loginForm a:hover {
-        color: #3F4E70; }
+    bottom: 15px;
+    right: 15px;
+    width: 100%;
+    max-width: 120px;
+    height: 30px;
+    background-color: #FFFFFF;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.0rem;
+    font-weight: bold;
+    text-align: center;
+    line-height: 30px;
+    color: #000000;
+    text-decoration: none; }
+    header.headingStyle a.triviaBtn:hover {
+      background-color: #E8CD5D; }
+
+#login {
+  background-color: #86C5DA; }
+
+div.login {
+  display: block;
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  background-color: #3F4E70;
+  padding: 20px 15px;
+  margin: 20px auto; }
+  div.login fieldset {
+    border: 2px solid #E8CD5D;
+    padding: 10px 20px; }
+  div.login legend {
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-size: 1.4rem;
+    color: #E8CD5D;
+    text-transform: capitalize;
+    padding: 0 5px; }
+  div.login label {
+    clear: right;
+    display: block;
+    width: 100%;
+    height: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    line-height: 30px;
+    text-transform: capitalize;
+    color: #E8CD5D; }
+  div.login input {
+    clear: right;
+    display: block;
+    width: 100%;
+    height: 30px;
+    background-color: #DEDDD8;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    color: #000000;
+    padding: 0 5px;
+    margin-bottom: 10px; }
+  div.login input[type=submit] {
+    -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    display: block;
+    width: 100%;
+    max-width: 100px;
+    height: 30px;
+    cursor: pointer;
+    background-color: #DEDDD8;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    text-transform: capitalize;
+    color: #555555;
+    margin: 20px auto; }
+    div.login input[type=submit]:hover {
+      background-color: #E8CD5D;
+      color: #3F4E70; }
+  div.login a {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.0rem;
+    color: #E8CD5D;
+    font-weight: bolder;
+    text-decoration: none; }
+    div.login a:hover {
+      color: #FC9E00; }
 
 #register {
   -moz-border-radius: 8px;
@@ -365,33 +418,6 @@ header.headingStyle {
       #register fieldset input[type=submit]:hover {
         background-color: #E8CD5D; }
 
-/* LOGO STYLING */
-h2.logo {
-  display: inline-block;
-  position: absolute;
-  top: 40px;
-  left: 30px;
-  width: 100%;
-  max-width: 79px;
-  height: 100px;
-  background-image: url(../images/img-logo-79x100.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  padding: 0;
-  margin: 0; }
-
-h2.logo a {
-  display: inline-block;
-  z-index: 100;
-  width: 100%;
-  max-width: 100px;
-  height: 79px;
-  padding: 0;
-  margin: 0; }
-
-h2.logo span {
-  display: none; }
-
 div.mainContent {
   background-color: #f2f5e4;
   padding: 20px; }
@@ -417,15 +443,7 @@ div.mainContent {
         div.mainContent .gameDescription p.demoParagraph a:hover {
           color: #EF7261; }
   div.mainContent .gameBackground {
-    background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2EwZDdlMiIvPjxzdG9wIG9mZnNldD0iNTAlIiBzdG9wLWNvbG9yPSIjNTM2YTkzIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjM2Y0ZTcwIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g');
-    background-size: 100%;
-    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #a0d7e2), color-stop(50%, #536a93), color-stop(100%, #3f4e70));
-    background-image: -moz-linear-gradient(#a0d7e2, #536a93, #3f4e70);
-    background-image: -webkit-linear-gradient(#a0d7e2, #536a93, #3f4e70);
-    background-image: linear-gradient(#a0d7e2, #536a93, #3f4e70);
-    -moz-box-shadow: inset 0 0 9px rgba(0, 0, 0, 0.5);
-    -webkit-box-shadow: inset 0 0 9px rgba(0, 0, 0, 0.5);
-    box-shadow: inset 0 0 9px rgba(0, 0, 0, 0.5);
+    background-color: #86C5DA;
     height: 800px;
     padding: 20px; }
     div.mainContent .gameBackground .mainGame {
@@ -542,6 +560,27 @@ div.mainContent {
     header.headingStyle h1 {
       font-size: 1.2rem;
       line-height: 70px; }
+    header.headingStyle a.loginBtn {
+      position: absolute;
+      top: 5px;
+      right: 0; }
+      header.headingStyle a.loginBtn img {
+        width: 100%;
+        max-width: 60%;
+        height: 60%; }
+
+  div.login {
+    margin: 0; }
+
+  header.headingStyle .logout {
+    height: 60%; }
+
+  header.headingStyle .logout p.logoutTxt {
+    font-size: 1.0rem;
+    line-height: 40%; }
+
+  header.headingStyle .logout span {
+    padding-left: 10px; }
 
   #register {
     -moz-border-radius: 0;
@@ -645,6 +684,20 @@ div.mainContent {
     header.headingStyle h1 {
       font-size: 1.4rem;
       line-height: 125px; }
+    header.headingStyle a.loginBtn {
+      position: absolute;
+      top: 30px;
+      right: 10px; }
+      header.headingStyle a.loginBtn img {
+        width: 100%;
+        max-width: 75%;
+        height: 75%; }
+
+  #login {
+    background-color: #86C5DA; }
+
+  div.login {
+    margin: 0 auto; }
 
   #register {
     -moz-border-radius: 0;
