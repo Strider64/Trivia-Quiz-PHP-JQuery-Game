@@ -1,5 +1,21 @@
 <?php
+require_once __DIR__ . '/vendor/autoload.php';
 require_once 'includes/utilities.inc.php';
+
+use trivia_project\users\Members;
+
+$member = new Members();
+
+$username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+$password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+
+if (isset($username) && isset($password)) {
+    $result = $member->read($username, $password);
+    if ($result) {
+        header("Location: trivia.php");
+        exit();
+    }
+}
 $quizDate = new DateTime("Now", new DateTimeZone("America/Detroit"));
 ?>
 <!DOCTYPE html>
@@ -8,18 +24,43 @@ Pepster's Place
 A Website Design & Development Company
 President John R Pepp
 -->
-<html>
+<html lang="en">
     <head>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta charset="UTF-8">
         <link rel="stylesheet" href="css/stylesheet.css">
-        <title></title>
+        <title>Pepster's Trivia Game</title>
     </head>
     <body>
         <header class="container headingStyle">
             <h2 class="logo"><span>Pepster's Place - Circle of Life</span> <a href="https://www.pepster.com"></a></h2>
+            <?php if (!$user) { ?>
+                <a class="loginBtn" href="#"><img src="images/img-login-keys-02.png" alt="login-btn"></a>
+            <?php } else { ?>
+                <div class="logout">
+                    <p class="logoutTxt">Welcome, <?php echo $user->username; ?>!<span><a class="logoutLink" href="logout.php">logout</a></span></p>
+                </div>
+            <?php } ?>
         </header>
+        <div  id="login" class="container">
+            <div class="login">
+
+                <form id="loginForm" action="<?php echo $basename; ?>" method="post">
+                    <fieldset>
+                        <legend>login</legend>
+                        <label for="username">username</label>
+                        <input id="username" type="text" name="username" value="">
+                        <label for="password">password</label>
+                        <input id="password" type="password" name="password">
+                        <input type="submit" name="submit" value="login">
+                        <a href="register.php">Register?</a>
+                    </fieldset>
+                </form>
+
+            </div>
+        </div>
         <div class="container mainContent">
+
             <div class="span6 gameBackground">
                 <div class="mainGame">
                     <div class="quizHeading">
@@ -53,16 +94,19 @@ President John R Pepp
                     </div>
                 </div>
             </div>
+
             <article class="span6 gameDescription">
-                <h1 class="demoHeading">Trivia Game Demo</h1>
+                <h6 class="demoHeading">Pepster's Trivia Game</h6>
                 <hr>
                 <br>
                 <p class="demoParagraph">I originally wrote this game in Flash Actionscript 3.0 about 5 to 6 years ago and about 2 years ago I started to convert it over to PHP. I eventually added JQuery, Ajax and JSON to the game in order to have more of a dynamic experience. I have future modifications in mind for this trivia game. Some of the modifications is having the ability to add, edit and delete questions/answer directly from a web browser. This will give the system administrator and users the ability to add questions/answers directly to the database's table remotely. I also want to add a high score table and each day have a winner. I'm am thinking that the winner of the day will have the ability to add questions/answers to the quiz giving the incentive to comeback tomorrow to play.</p>
                 <p class="demoParagraph">All the current games files and the respective directories can be found at <a href="https://github.com/Strider64/Trivia-Quiz-PHP-JQuery-Game">Github</a>. Feel free to use all of the files as is or with modifications, but all I ask is that you give me credit for the game itself. Just inserting the credit inside the code somewhere will be enough for me. Even if you don't use any of the code in your own project I hope this will help you out in the long run.</p>
                 <p class="demoParagraph"><a href="https://www.pepster.com">Click Here</a> to go Pepster's Place my main website.</p>
             </article>
-            <script src="javascript/jquery-3.1.1.min.js"></script>
-            <script src="javascript/game_play_01.js"></script>
+
         </div>
+        <script src="javascript/jquery-3.1.1.min.js"></script>
+        <script src="javascript/login_button.js"></script>
+        <script src="javascript/game_play_01.js"></script>
     </body>
 </html>
