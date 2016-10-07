@@ -109,7 +109,7 @@ President John R Pepp
                 <br>
                 <p class="demoParagraph">I originally wrote this game in Flash Actionscript 3.0 about 5 to 6 years ago and about 2 years ago I started to convert it over to PHP. I eventually added JQuery, Ajax and JSON to the game in order to have more of a dynamic experience. I have future modifications in mind for this trivia game. Some of the modifications is having the ability to add, edit and delete questions/answer directly from a web browser. This will give the system administrator and users the ability to add questions/answers directly to the database's table remotely. I also want to add a high score table and each day have a winner. I'm am thinking that the winner of the day will have the ability to add questions/answers to the quiz giving the incentive to comeback tomorrow to play.</p>
                 <p class="demoParagraph">All the current games files and the respective directories can be found at <a href="https://github.com/Strider64/Trivia-Quiz-PHP-JQuery-Game">Github</a>. Feel free to use all of the files as is or with modifications, but all I ask is that you give me credit for the game itself. Just inserting the credit inside the code somewhere will be enough for me. Even if you don't use any of the code in your own project I hope this will help you out in the long run.</p>
-                <p class="demoParagraph"><a href="https://www.pepster.com">Click Here</a> to go Pepster's Place my main website.</p>
+                <p class="demoParagraph"><a href="https://www.pepster.com">Click Here</a> to go to Pepster's Place which is my main website.</p>
             </article>
 
         </div>
