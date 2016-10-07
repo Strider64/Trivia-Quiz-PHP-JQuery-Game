@@ -18,6 +18,8 @@ class GenerateGame {
     protected $total = \NULL;
     protected $num = 10;
     protected $play_date = \NULL;
+    protected $today = \NULL;
+    protected $dateFormat = \NULL;
 
     public function __construct() {
         
@@ -51,6 +53,30 @@ class GenerateGame {
         }
         $this->total = count($this->gameQuestions) - (count($this->gameQuestions) % $this->num);
         return array_slice($this->gameQuestions, -$this->total);
+    }
+    
+    public function checkTriviaTable() {
+        $db = DB::getInstance();
+        $pdo = $db->getConnection();
+        $this->today = new DateTime("now", new \DateTimeZone("America/Detroit"));
+        $this->today->modify("midnight");
+        try {
+            $this->query = "SELECT 1 FROM trivia_questions WHERE play_date = :play_date";
+            $this->stmt = $pdo->prepare($this->query);
+            $this->dateFormat = $this->today->format("Y-m-d H:i:s");
+            
+            $this->stmt->bindParam(':play_date', $this->dateFormat);
+            $this->stmt->execute();
+            $this->row = $this->stmt->fetch();
+            
+            if ($this->row) {
+                return false; 
+            } else {
+                return true;
+            }
+        } catch (PDOException $e) {
+            echo $e->getMessage();
+        }
     }
     
     protected function clearPlaydate() {
