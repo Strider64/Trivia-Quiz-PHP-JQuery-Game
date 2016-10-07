@@ -127,7 +127,9 @@ $(function () {
                     $nextBtn.on('click', reset_display);
                 } else {
                     $checkAns.off('click', check_answer);
-                    $nextBtn.hide();
+                    $nextBtn.text("Game Over");
+                    $nextBtn.css("background-color", "red");
+                    $nextBtn.slideDown(500);
                     $nextBtn.off('click', reset_display);
                 }
 
