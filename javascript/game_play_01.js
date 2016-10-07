@@ -12,7 +12,9 @@ $(function () {
             points = 100,
             bright_green = '#395870',
             $checkAns = $('.clicked'),
-            $nextBtn = $('.nextBtn');
+            $nextBtn = $('.nextBtn'),
+            $popupBox = $('.shadow'),
+            $startBtn = $('.startBtn');
 
     function displayScore(points) {
         var displayScore = '',
@@ -177,10 +179,17 @@ $(function () {
         }); // End of ajax function:
     } // End of retrieve_question function:
 
-    load_question(currentQuestion);
-    $checkAns.on('click', check_answer);
+
     $checkAns.click(function (event) {
         event.preventDefault();
+    });
 
+    $popupBox.show();
+
+    $startBtn.on('click', function (event) {
+        event.preventDefault();
+        $popupBox.hide();
+        load_question(currentQuestion);
+        $checkAns.on('click', check_answer);
     });
 });  // End of Document Ready:  
