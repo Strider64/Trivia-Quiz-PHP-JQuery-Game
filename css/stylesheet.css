@@ -181,6 +181,57 @@ body {
   font-size: 100%;
   background-color: #A0D7E2; }
 
+.shadow {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 20000;
+  background-color: rgba(0, 0, 0, 0.6); }
+  .shadow .startBox {
+    -moz-border-radius: 40px;
+    -webkit-border-radius: 40px;
+    border-radius: 40px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    height: 400px;
+    background-color: #FFFFFF;
+    margin-top: -200px;
+    margin-left: -200px; }
+  .shadow .startBtn {
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    border-radius: 20px;
+    -moz-box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.8);
+    -webkit-box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.8);
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    width: 100%;
+    max-width: 250px;
+    height: 90px;
+    background-color: #d11010;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #FBFCF7;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 2.4rem;
+    text-align: center;
+    line-height: 90px;
+    margin-top: -45px;
+    margin-left: -125px; }
+    .shadow .startBtn:hover {
+      background-color: #1c8443; }
+
 /* LOGO STYLING */
 h2.logo {
   display: inline-block;
@@ -426,6 +477,31 @@ div.login {
       #register fieldset input[type=submit]:hover {
         background-color: #E8CD5D; }
 
+div.maintenance {
+  background-color: #68D693;
+  padding: 30px; }
+  div.maintenance nav.maintenanceStyle {
+    height: 400px;
+    background-color: #893660;
+    padding: 20px; }
+    div.maintenance nav.maintenanceStyle ul li:first-child {
+      border-top: none; }
+    div.maintenance nav.maintenanceStyle ul li {
+      border-top: 2px solid #FFFFFF; }
+    div.maintenance nav.maintenanceStyle ul li a {
+      display: block;
+      width: 100%;
+      max-width: 360px;
+      height: 50px;
+      background-color: #000000;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #FFFFFF;
+      font-size: 1.4rem;
+      line-height: 50px;
+      text-transform: capitalize;
+      text-decoration: none;
+      padding-left: 10px; }
+
 div.mainContent {
   background-color: #f2f5e4;
   padding: 20px; }
@@ -563,6 +639,57 @@ div.mainContent {
   .span6, .span7 {
     width: 100%; }
 
+  .shadow {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 20000;
+    background-color: rgba(0, 0, 0, 0.6); }
+    .shadow .startBox {
+      -moz-border-radius: 40px;
+      -webkit-border-radius: 40px;
+      border-radius: 40px;
+      position: relative;
+      top: 50%;
+      left: 50%;
+      display: block;
+      width: 100%;
+      max-width: 200px;
+      height: 200px;
+      background-color: #FFFFFF;
+      margin-top: -100px;
+      margin-left: -100px; }
+    .shadow .startBtn {
+      -moz-border-radius: 20px;
+      -webkit-border-radius: 20px;
+      border-radius: 20px;
+      -moz-box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.8);
+      -webkit-box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.8);
+      box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.8);
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      display: block;
+      width: 100%;
+      max-width: 126px;
+      height: 46px;
+      background-color: #d11010;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #FBFCF7;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 1.4rem;
+      text-align: center;
+      line-height: 46px;
+      margin-top: -23px;
+      margin-left: -63px; }
+      .shadow .startBtn:hover {
+        background-color: #1c8443; }
+
   header.headingStyle {
     height: 70px; }
     header.headingStyle h1 {
@@ -685,6 +812,57 @@ div.mainContent {
   /* 481px = 30.063em & 768px = 48em */
   .span6, .span7 {
     width: 100%; }
+
+  .shadow {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 20000;
+    background-color: rgba(0, 0, 0, 0.6); }
+    .shadow .startBox {
+      -moz-border-radius: 40px;
+      -webkit-border-radius: 40px;
+      border-radius: 40px;
+      position: relative;
+      top: 50%;
+      left: 50%;
+      display: block;
+      width: 100%;
+      max-width: 200px;
+      height: 200px;
+      background-color: #FFFFFF;
+      margin-top: -100px;
+      margin-left: -100px; }
+    .shadow .startBtn {
+      -moz-border-radius: 20px;
+      -webkit-border-radius: 20px;
+      border-radius: 20px;
+      -moz-box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.8);
+      -webkit-box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.8);
+      box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.8);
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      display: block;
+      width: 100%;
+      max-width: 126px;
+      height: 46px;
+      background-color: #d11010;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #FBFCF7;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 1.4rem;
+      text-align: center;
+      line-height: 46px;
+      margin-top: -23px;
+      margin-left: -63px; }
+      .shadow .startBtn:hover {
+        background-color: #1c8443; }
 
   header.headingStyle {
     height: 125px; }
