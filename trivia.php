@@ -34,8 +34,11 @@ President John R Pepp
     <body>
         <header class="container headingStyle">
             <h2 class="logo"><span>Pepster's Place - Circle of Life</span> <a href="https://www.pepster.com"></a></h2>
+            <?php if ($user && $user->security_level === 'sysop')  { ?>
+            <a class="iconBtn" href="trivia_maintenance.php"><img src="images/icon-maintenance.png" alt="maintenance-btn"></a>
+            <?php } ?>
             <?php if (!$user) { ?>
-                <a class="loginBtn" href="#"><img src="images/img-login-keys-02.png" alt="login-btn"></a>
+            <a class="loginBtn" href="#"><img src="images/icon-login.png" alt="login-btn"></a>
             <?php } else { ?>
                 <div class="logout">
                     <p class="logoutTxt">Welcome, <?php echo $user->username; ?>!<span><a class="logoutLink" href="logout.php">logout</a></span></p>
