@@ -32,11 +32,7 @@ President John R Pepp
         <title>Pepster's Trivia Game</title>
     </head>
     <body>
-        <div class="shadow">
-            <div class="startBox">
-                <a class="startBtn">Start</a>
-            </div>
-        </div>
+
         <header class="container headingStyle">
             <h2 class="logo"><span>Pepster's Place - Circle of Life</span> <a href="https://www.pepster.com"></a></h2>
             <?php if ($user && $user->security_level === 'sysop') { ?>
@@ -70,7 +66,13 @@ President John R Pepp
         <div class="container mainContent">
 
             <div class="span6 gameBackground">
+
                 <div class="mainGame">
+                    <div class="shadow">
+                        <div class="startBox">
+                            <a class="startBtn">Start</a>
+                        </div>
+                    </div>
                     <div class="quizHeading">
                         <h1 class="quizTitle">Pepster's Trivia Game<span class="todaysDate"><?= $quizDate->format("F j, Y"); ?></span></h1>
                     </div>
