@@ -70,6 +70,8 @@ President John R Pepp
                 <div class="mainGame">
                     <div class="shadow">
                         <div class="startBox">
+                            <h3 class="startHeading">Pepster's Trivia Game</h3>
+                            <p class="startParagraph">Author : John Pepp</p>
                             <a class="startBtn">Start</a>
                         </div>
                     </div>
