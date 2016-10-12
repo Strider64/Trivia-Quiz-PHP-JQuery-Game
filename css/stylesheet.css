@@ -188,9 +188,9 @@ h2.logo {
   top: 0;
   left: 30px;
   width: 100%;
-  max-width: 79px;
+  max-width: 100px;
   height: 100px;
-  background-image: url(../images/img-logo-79x100.png);
+  background-image: url(../images/img-logo-100x100.png);
   background-repeat: no-repeat;
   background-position: center;
   padding: 0;
@@ -490,7 +490,7 @@ div.mainContent {
       display: block;
       width: 100%;
       max-width: 500px;
-      height: 640px;
+      height: 700px;
       background-color: rgba(252, 158, 0, 0.6);
       padding: 20px;
       margin: 0 auto; }
@@ -504,7 +504,7 @@ div.mainContent {
         left: 0;
         width: 100%;
         max-width: 500px;
-        height: 640px;
+        height: 700px;
         z-index: 20000;
         background-color: rgba(51, 51, 51, 0.8); }
         div.mainContent .gameBackground .mainGame .shadow .startBox {
@@ -533,33 +533,42 @@ div.mainContent {
             font-size: 1.2rem;
             line-height: 1.5;
             text-align: center; }
-        div.mainContent .gameBackground .mainGame .shadow .startBtn {
-          -moz-border-radius: 20px;
-          -webkit-border-radius: 20px;
-          border-radius: 20px;
-          -moz-box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.8);
-          -webkit-box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.8);
-          box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.8);
-          cursor: pointer;
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          display: block;
-          width: 100%;
-          max-width: 126px;
-          height: 44px;
-          background-color: #d11010;
-          font-family: Arial, Helvetica, sans-serif;
-          color: #FBFCF7;
-          text-transform: uppercase;
-          font-weight: bold;
-          font-size: 1.2rem;
-          text-align: center;
-          line-height: 45px;
-          margin-top: 55px;
-          margin-left: -63px; }
-          div.mainContent .gameBackground .mainGame .shadow .startBtn:hover {
-            background-color: #1c8443; }
+          div.mainContent .gameBackground .mainGame .shadow .startBox form#highscores {
+            -moz-border-radius: 8px;
+            -webkit-border-radius: 8px;
+            border-radius: 8px;
+            display: block;
+            width: 100%;
+            max-width: 360px;
+            height: 60px;
+            background-color: #ccc;
+            text-align: center;
+            line-height: 60px;
+            margin: 145px auto 0; }
+            div.mainContent .gameBackground .mainGame .shadow .startBox form#highscores label {
+              font-family: Arial, Helvetica, sans-serif;
+              font-size: 1.2rem;
+              padding: 0 5px; }
+            div.mainContent .gameBackground .mainGame .shadow .startBox form#highscores input {
+              border: none;
+              outline: none;
+              font-family: Arial, Helvetica, sans-serif;
+              font-size: 1.0rem;
+              width: 100%;
+              max-width: 120px;
+              height: 25px;
+              padding: 0 5px; }
+            div.mainContent .gameBackground .mainGame .shadow .startBox form#highscores input[type=submit] {
+              cursor: pointer;
+              text-transform: uppercase;
+              font-family: Arial, Helvetica, sans-serif;
+              font-size: 1.0rem;
+              color: #FFFFFF;
+              width: 100%;
+              max-width: 80px;
+              height: 30px;
+              background-color: #000000;
+              margin: 0 10px; }
       div.mainContent .gameBackground .mainGame div.quizHeading h1.quizTitle {
         -moz-border-radius: 20px;
         -webkit-border-radius: 20px;
@@ -604,12 +613,13 @@ div.mainContent {
       div.mainContent .gameBackground .mainGame [class^="answer"] {
         display: block;
         width: 100%;
-        height: 50px;
+        height: 70px;
+        vertical-align: middle;
         background-color: #965e00;
         border-top: 2px solid #2e2e2e;
         font-family: Arial, Helvetica, sans-serif;
-        font-size: 1.2rem;
-        line-height: 40px;
+        font-size: 1.0rem;
+        line-height: 1.5;
         color: #FFFFFF;
         text-decoration: none;
         padding: 5px 10px; }
@@ -750,16 +760,16 @@ div.mainContent {
   /* LOGO STYLING */
   h2.logo {
     position: absolute;
-    top: 0;
-    background-image: url(../images/img-logo.png);
+    top: 20px;
+    background-image: url(../images/img-logo-50x50.png);
     width: 100%;
-    max-width: 55px;
-    height: 70px; }
+    max-width: 50px;
+    height: 50px; }
 
   h2.logo a {
     width: 100%;
-    max-width: 55px;
-    height: 70px; }
+    max-width: 50px;
+    height: 50px; }
 
   div.mainContent {
     padding: 0; }
@@ -778,7 +788,13 @@ div.mainContent {
         div.mainContent .gameBackground .mainGame div.quizHeading {
           display: none; }
         div.mainContent .gameBackground .mainGame .questStyle {
-          margin-top: 0; }
+          display: block;
+          width: 100%;
+          max-width: 100%;
+          height: 150px;
+          background-color: #FBFCF7;
+          padding: 15px;
+          margin-top: 10px; }
           div.mainContent .gameBackground .mainGame .questStyle h3 {
             font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
             font-size: 1.0rem;
@@ -787,12 +803,10 @@ div.mainContent {
         div.mainContent .gameBackground .mainGame [class^="answer"] {
           display: block;
           width: 100%;
-          height: 50px;
           background-color: #965e00;
           border-top: 2px solid #2e2e2e;
           font-family: Arial, Helvetica, sans-serif;
           font-size: 1.0rem;
-          line-height: 40px;
           color: #FFFFFF;
           text-decoration: none;
           padding: 5px 10px; }
@@ -862,9 +876,28 @@ div.mainContent {
             margin-left: -63px; }
             div.mainContent .gameBackground .mainGame .shadow .startBtn:hover {
               background-color: #1c8443; }
+        div.mainContent .gameBackground .mainGame .scoreboard {
+          clear: both;
+          display: block;
+          width: auto;
+          height: 50px; }
+          div.mainContent .gameBackground .mainGame .scoreboard .stopwatch, div.mainContent .gameBackground .mainGame .scoreboard .scoreBox {
+            float: left;
+            display: block;
+            width: 50%;
+            height: 30px;
+            border: 1px solid #2e2e2e;
+            background-color: #FBFCF7; }
+            div.mainContent .gameBackground .mainGame .scoreboard .stopwatch p.countdownClock, div.mainContent .gameBackground .mainGame .scoreboard .stopwatch p.score, div.mainContent .gameBackground .mainGame .scoreboard .scoreBox p.countdownClock, div.mainContent .gameBackground .mainGame .scoreboard .scoreBox p.score {
+              font-family: Arial, Helvetica, sans-serif;
+              font-size: 1.0rem;
+              line-height: 30px;
+              color: #965e00;
+              text-align: center; }
         div.mainContent .gameBackground .mainGame .nextBtnBox .nextBtn {
           border-bottom: 2px solid #000000;
-          background-color: red; } }
+          background-color: #000000;
+          margin-top: -30px; } }
 /* TABLET MEDIA QUERY STYLING */
 @media only screen and (min-width: 481px) and (max-width: 1020px) {
   /* 481px = 30.063em & 768px = 48em */
