@@ -14,7 +14,9 @@ $(function () {
             $checkAns = $('.clicked'),
             $nextBtn = $('.nextBtn'),
             $popupBox = $('.shadow'),
-            $startBtn = $('.startBtn');
+            $startBtn = $('.startBtn'),
+            $scoreVal = $('.scoreVal'),
+            highscore = 0;
 
     function displayScore(points) {
         var displayScore = '',
@@ -90,6 +92,17 @@ $(function () {
 
     }
 
+    function end_of_game() {
+        //highscore = score;
+        //$scoreVal.text(highscore);
+        //$('.highscoresBox').show();
+        $checkAns.off('click', check_answer);
+        $nextBtn.text("Game Over");
+        $nextBtn.css("background-color", "red");
+        $nextBtn.slideDown(500);
+        $nextBtn.off('click', reset_display);
+    }
+
     function check_answer(e) {
         e.preventDefault();
         //console.log("e.target", e.target);
@@ -128,11 +141,7 @@ $(function () {
                     $nextBtn.slideDown(500);
                     $nextBtn.on('click', reset_display);
                 } else {
-                    $checkAns.off('click', check_answer);
-                    $nextBtn.text("Game Over");
-                    $nextBtn.css("background-color", "red");
-                    $nextBtn.slideDown(500);
-                    $nextBtn.off('click', reset_display);
+                    end_of_game();
                 }
 
             },
