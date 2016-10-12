@@ -72,7 +72,11 @@ President John R Pepp
                         <div class="startBox">
                             <h3 class="startHeading">Pepster's Trivia Game</h3>
                             <p class="startParagraph">Author : John Pepp</p>
-                            <a class="startBtn">Start</a>
+                            <form id="highscores" action="trivia.php" method="post">
+                                <label for="playername">Player Name</label>
+                                <input id="playername" type="text" name="playername" placeholder="Optional" autocomplete="off">
+                                <input class="startBtn" type="submit" name="submit" value="enter">
+                            </form>
                         </div>
                     </div>
                     <div class="quizHeading">
@@ -104,6 +108,7 @@ President John R Pepp
                     <div class="nextBtnBox">
                         <button class="nextBtn">Next Question</button>
                     </div>
+
                 </div>
             </div>
 
