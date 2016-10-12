@@ -849,33 +849,42 @@ div.mainContent {
               font-size: 1.2rem;
               line-height: 1.5;
               text-align: center; }
-          div.mainContent .gameBackground .mainGame .shadow .startBtn {
-            -moz-border-radius: 20px;
-            -webkit-border-radius: 20px;
-            border-radius: 20px;
-            -moz-box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.8);
-            -webkit-box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.8);
-            box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.8);
-            cursor: pointer;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            display: block;
-            width: 100%;
-            max-width: 126px;
-            height: 44px;
-            background-color: #d11010;
-            font-family: Arial, Helvetica, sans-serif;
-            color: #FBFCF7;
-            text-transform: uppercase;
-            font-weight: bold;
-            font-size: 1.2rem;
-            text-align: center;
-            line-height: 45px;
-            margin-top: 55px;
-            margin-left: -63px; }
-            div.mainContent .gameBackground .mainGame .shadow .startBtn:hover {
-              background-color: #1c8443; }
+            div.mainContent .gameBackground .mainGame .shadow .startBox form#highscores {
+              -moz-border-radius: 0;
+              -webkit-border-radius: 0;
+              border-radius: 0;
+              display: block;
+              width: 100%;
+              max-width: 360px;
+              height: 60px;
+              background-color: #ccc;
+              text-align: left;
+              line-height: 60px;
+              margin: 80px auto 0; }
+              div.mainContent .gameBackground .mainGame .shadow .startBox form#highscores label {
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 1.0rem;
+                padding: 0 5px; }
+              div.mainContent .gameBackground .mainGame .shadow .startBox form#highscores input {
+                border: none;
+                outline: none;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 0.8rem;
+                width: 100%;
+                max-width: 100px;
+                height: 25px;
+                padding: 0 5px; }
+              div.mainContent .gameBackground .mainGame .shadow .startBox form#highscores input[type=submit] {
+                cursor: pointer;
+                text-transform: uppercase;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 0.8rem;
+                color: #FFFFFF;
+                width: 100%;
+                max-width: 60px;
+                height: 30px;
+                background-color: #000000;
+                margin: 0; }
         div.mainContent .gameBackground .mainGame .scoreboard {
           clear: both;
           display: block;
@@ -927,33 +936,6 @@ div.mainContent {
       background-color: #FFFFFF;
       margin-top: -100px;
       margin-left: -100px; }
-    .shadow .startBtn {
-      -moz-border-radius: 20px;
-      -webkit-border-radius: 20px;
-      border-radius: 20px;
-      -moz-box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.8);
-      -webkit-box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.8);
-      box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.8);
-      cursor: pointer;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      display: block;
-      width: 100%;
-      max-width: 126px;
-      height: 46px;
-      background-color: #d11010;
-      font-family: Arial, Helvetica, sans-serif;
-      color: #FBFCF7;
-      text-transform: uppercase;
-      font-weight: bold;
-      font-size: 1.4rem;
-      text-align: center;
-      line-height: 46px;
-      margin-top: -23px;
-      margin-left: -63px; }
-      .shadow .startBtn:hover {
-        background-color: #1c8443; }
 
   header.headingStyle {
     height: 125px; }
