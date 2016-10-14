@@ -14,11 +14,15 @@ $(function () {
             $checkAns = $('.clicked'),
             $nextBtn = $('.nextBtn'),
             $popupBox = $('.shadow'),
-            $startBtn = $('.startBtn'),
+            $submitBtn = $('.enterBtn'),
             $scoreVal = $('.scoreVal'),
+            player_name = null,
             highscore = 0;
 
     function displayScore(points) {
+        if (points <= 0) {
+            points = 0;
+        }
         var displayScore = '',
                 maxZeros = 5,
                 x = 0;
@@ -32,7 +36,9 @@ $(function () {
         while ((displayScore.length - maxZeros) !== 0) {
             displayScore = '0' + displayScore;
         }
+        highscore = displayScore;
         $totalPts.text(displayScore);
+
     } // End of Display Score Function:
 
     displayScore(score);
@@ -92,15 +98,41 @@ $(function () {
 
     }
 
+    function highscoresFCN() {
+        $('.highscoresShadow').show();
+        var url = 'display_highscores.php'; // Grab the html (formatted css) from printList.php file:
+        $('#cms').load(url + ' #highscoresTable'); // Display Result back:
+
+    }
+    
+
     function end_of_game() {
-        //highscore = score;
-        //$scoreVal.text(highscore);
-        //$('.highscoresBox').show();
+        var params = {player_name: player_name, highscore: highscore};
+        var myData = jQuery.param(params); // Set parameters to correct Ajax format:
+
+        console.log('highscore', highscore)
+        $.ajax({
+            type: 'post',
+            url: 'highscores.php',
+            data: myData,
+            success: function (info) {
+                console.log('info', info);
+            },
+            error: function (request, status, error) {
+
+                //console.log(request, status, error);
+                //console.log('check_answer', request, request.responseText);
+
+
+            }
+        }); // End of ajax function:       
         $checkAns.off('click', check_answer);
         $nextBtn.text("Game Over");
         $nextBtn.css("background-color", "red");
         $nextBtn.slideDown(500);
         $nextBtn.off('click', reset_display);
+        
+        highscoresFCN();
     }
 
     function check_answer(e) {
@@ -166,7 +198,7 @@ $(function () {
                 myTimer(duration);
                 //console.log(data);
                 id = data.id;
-                console.log(data.id, data.q_num);
+                //console.log(data.id, data.q_num);
                 $('h3.displayQuest').text(data.question);
                 //$('h3.displayQuest').text(data.q_num + ". " + data.question);
                 $('a.answer1').text(data.answer1);
@@ -195,10 +227,16 @@ $(function () {
 
     $popupBox.show();
 
-    $startBtn.on('click', function (event) {
+    $submitBtn.on('click', function (event) {
         event.preventDefault();
-        $popupBox.hide();
-        load_question(currentQuestion);
-        $checkAns.on('click', check_answer);
+        player_name = $.trim($('#playername').val());
+        if (player_name !== '') {
+            console.log('player_name', player_name);
+            $popupBox.hide();
+            load_question(currentQuestion);
+            $checkAns.on('click', check_answer);
+        } else {
+            $('#playername').val('');
+        }
     });
 });  // End of Document Ready:  
