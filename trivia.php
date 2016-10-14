@@ -64,7 +64,15 @@ President John R Pepp
             </div>
         </div>
         <div class="container mainContent">
+            <div class="highscoresShadow">
 
+                <div id="tableBox">
+                    <!--- Highscores Table -->
+                    <div id="cms"></div>
+                    <a  class="exitBtn" href="trivia.php">trivia game</a>
+                </div>
+
+            </div>
             <div class="span6 gameBackground">
 
                 <div class="mainGame">
@@ -72,10 +80,10 @@ President John R Pepp
                         <div class="startBox">
                             <h3 class="startHeading">Pepster's Trivia Game</h3>
                             <p class="startParagraph">Author : John Pepp</p>
-                            <form id="highscores" action="trivia.php" method="post">
+                            <form id="highscores" action="highscores.php" method="post">
                                 <label for="playername">Player Name</label>
-                                <input id="playername" type="text" name="playername" placeholder="Optional" autocomplete="off">
-                                <input class="startBtn" type="submit" name="submit" value="enter">
+                                <input id="playername" type="text" name="player_name" autocomplete="off" autofocus>
+                                <input class="enterBtn" type="submit" name="submit" value="enter">
                             </form>
                         </div>
                     </div>
@@ -101,7 +109,7 @@ President John R Pepp
                         </div>
                         <!-- The Score done in jQuery -->
                         <div class="scoreBox">
-                            <p class="score">Score: <span class="totalPoints"></span> </p>
+                            <p class="score" data-user="">Score: <span class="totalPoints"></span> </p>
                         </div> 
 
                     </div>
