@@ -31,7 +31,7 @@ class Highscores {
     public function read() {
         $db = DB::getInstance();
         $pdo = $db->getConnection();
-        $this->stmt = $pdo->query("SELECT playername, highscore, play_date FROM highscores ORDER BY highscore DESC LIMIT 10");
+        $this->stmt = $pdo->query("SELECT playername, highscore, play_date FROM highscores WHERE DATE(play_date) = CURDATE() ORDER BY highscore DESC LIMIT 10");
         return $this->stmt;
 
     }
