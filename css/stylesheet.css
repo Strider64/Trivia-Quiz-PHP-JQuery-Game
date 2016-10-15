@@ -854,6 +854,89 @@ div.mainContent {
     max-width: 50px;
     height: 50px; }
 
+  .highscoresShadow {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    z-index: 20000;
+    background-color: rgba(51, 51, 51, 0.8); }
+    .highscoresShadow #tableBox {
+      position: relative;
+      top: 50%;
+      left: 50%;
+      display: block;
+      width: 100%;
+      max-width: 320px;
+      height: 460px;
+      border: 4px solid #000000;
+      background-color: #FFFFFF;
+      margin-top: -300px;
+      margin-left: -160px; }
+
+  #highscoresTable {
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    font-size: 12px;
+    width: 300px;
+    text-align: left;
+    border-collapse: collapse;
+    padding: 0; }
+
+  #highscoresTable th {
+    font-size: 13px;
+    font-weight: normal;
+    padding: 8px;
+    background: #b9c9fe;
+    border-top: 4px solid #aabcfe;
+    border-bottom: 1px solid #fff;
+    color: #039; }
+
+  #highscoresTable th.highscoresHeading {
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    color: #039;
+    font-size: 1.4rem;
+    line-height: 1.5;
+    text-align: center; }
+
+  #highscoresTable td {
+    padding: 8px;
+    background: #e8edff;
+    border-bottom: 1px solid #fff;
+    color: #669;
+    border-top: 1px solid transparent; }
+
+  #highscoresTable tr:hover td {
+    background: #d0dafd;
+    color: #339; }
+
+  a.exitBtn {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    height: 40px;
+    background-color: #b9c9fe;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    line-height: 40px;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    color: #039;
+    margin-top: 174px;
+    margin-left: -100px; }
+    a.exitBtn:hover {
+      background-color: #039;
+      color: #b9c9fe; }
+
   div.mainContent {
     padding: 0; }
     div.mainContent .gameDescription {
@@ -861,12 +944,13 @@ div.mainContent {
     div.mainContent .gameBackground {
       background-color: #000000;
       height: auto;
-      padding: 0; }
+      padding: 0;
+      margin: 0; }
       div.mainContent .gameBackground .mainGame {
         -moz-border-radius: 0;
         -webkit-border-radius: 0;
         border-radius: 0;
-        max-width: 90%;
+        width: 85%;
         padding: 0; }
         div.mainContent .gameBackground .mainGame div.quizHeading {
           display: none; }
@@ -876,7 +960,7 @@ div.mainContent {
           max-width: 100%;
           height: 150px;
           background-color: #FBFCF7;
-          padding: 15px;
+          padding: 20px 15px 10px 25px;
           margin-top: 10px; }
           div.mainContent .gameBackground .mainGame .questStyle h3 {
             font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
@@ -886,13 +970,16 @@ div.mainContent {
         div.mainContent .gameBackground .mainGame [class^="answer"] {
           display: block;
           width: 100%;
+          height: 50px;
           background-color: #965e00;
           border-top: 2px solid #2e2e2e;
           font-family: Arial, Helvetica, sans-serif;
-          font-size: 1.0rem;
+          font-size: 0.8rem;
+          line-height: 25px;
+          font-weight: bold;
           color: #FFFFFF;
           text-decoration: none;
-          padding: 5px 10px; }
+          padding: 0 15px 0 25px; }
         div.mainContent .gameBackground .mainGame .shadow {
           -moz-border-radius: 0;
           -webkit-border-radius: 0;
@@ -915,21 +1002,22 @@ div.mainContent {
             left: 50%;
             display: block;
             width: 100%;
-            max-width: 300px;
-            height: 300px;
-            border: 10px solid #000000;
+            max-width: 250px;
+            height: 180px;
+            border: 5px solid #000000;
             background-color: #FFFFFF;
-            margin-top: -150px;
-            margin-left: -150px; }
+            padding: 0 5px;
+            margin-top: -220px;
+            margin-left: -125px; }
             div.mainContent .gameBackground .mainGame .shadow .startBox .startHeading {
               font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-              font-size: 1.4rem;
+              font-size: 1.0rem;
               line-height: 1.5;
               text-align: center;
               margin-top: 50px; }
             div.mainContent .gameBackground .mainGame .shadow .startBox .startParagraph {
               font-family: Arial, Helvetica, sans-serif;
-              font-size: 1.2rem;
+              font-size: 0.8rem;
               line-height: 1.5;
               text-align: center; }
             div.mainContent .gameBackground .mainGame .shadow .startBox form#highscores {
@@ -938,15 +1026,15 @@ div.mainContent {
               border-radius: 0;
               display: block;
               width: 100%;
-              max-width: 360px;
-              height: 60px;
+              max-width: 250px;
+              height: 30px;
               background-color: #ccc;
               text-align: left;
-              line-height: 60px;
-              margin: 80px auto 0; }
+              line-height: 30px;
+              margin: 30px auto 0; }
               div.mainContent .gameBackground .mainGame .shadow .startBox form#highscores label {
                 font-family: Arial, Helvetica, sans-serif;
-                font-size: 1.0rem;
+                font-size: 0.8rem;
                 padding: 0 5px; }
               div.mainContent .gameBackground .mainGame .shadow .startBox form#highscores input {
                 border: none;
@@ -954,20 +1042,20 @@ div.mainContent {
                 font-family: Arial, Helvetica, sans-serif;
                 font-size: 0.8rem;
                 width: 100%;
-                max-width: 100px;
-                height: 25px;
+                max-width: 60px;
+                height: 20px;
                 padding: 0 5px; }
               div.mainContent .gameBackground .mainGame .shadow .startBox form#highscores input[type=submit] {
                 cursor: pointer;
                 text-transform: uppercase;
                 font-family: Arial, Helvetica, sans-serif;
-                font-size: 0.8rem;
+                font-size: 0.6rem;
                 color: #FFFFFF;
                 width: 100%;
-                max-width: 60px;
-                height: 30px;
+                max-width: 50px;
+                height: 20px;
                 background-color: #000000;
-                margin: 0; }
+                margin-left: 10px; }
         div.mainContent .gameBackground .mainGame .scoreboard {
           clear: both;
           display: block;
