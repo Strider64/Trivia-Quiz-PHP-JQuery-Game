@@ -104,7 +104,18 @@ $(function () {
         $('#cms').load(url + ' #highscoresTable'); // Display Result back:
 
     }
-    
+
+    function displayMyTimer(sec) {
+        if (timer)
+            clearInterval(timer); // Stop timer 
+        /* The actual timer funtion, setup & execution */
+        timer = setInterval(function () {
+            if (sec === -1) {
+                highscoresFCN();
+            }
+            sec--;
+        }, 1000); // End of Actual Timer Function:		
+    }
 
     function end_of_game() {
         var params = {player_name: player_name, highscore: highscore};
@@ -126,13 +137,13 @@ $(function () {
 
             }
         }); // End of ajax function:       
-        $checkAns.off('click', check_answer);
+
         $nextBtn.text("Game Over");
         $nextBtn.css("background-color", "red");
         $nextBtn.slideDown(500);
         $nextBtn.off('click', reset_display);
-        
-        highscoresFCN();
+        displayMyTimer(2);
+
     }
 
     function check_answer(e) {
@@ -145,6 +156,7 @@ $(function () {
     } // End of check_answer function:
 
     function check_answer_ajax(myData) {
+        $checkAns.off('click', check_answer);
         $.ajax({
             type: 'post',
             url: 'game_play_01.php',
@@ -169,7 +181,6 @@ $(function () {
                 currentQuestion += 1;
                 id = currentQuestion;
                 if (currentQuestion <= totalQuestions) {
-                    $checkAns.off('click', check_answer);
                     $nextBtn.slideDown(500);
                     $nextBtn.on('click', reset_display);
                 } else {
@@ -231,10 +242,26 @@ $(function () {
         event.preventDefault();
         player_name = $.trim($('#playername').val());
         if (player_name !== '') {
-            console.log('player_name', player_name);
-            $popupBox.hide();
-            load_question(currentQuestion);
-            $checkAns.on('click', check_answer);
+            var params = {check: true};
+            var myData = jQuery.param(params); // Set parameters to correct Ajax format:
+            $.ajax({
+                type: 'post',
+                url: 'generate_game.php',
+                data: myData,
+                success: function (info) {
+                    if (info) {
+                        console.log('player_name', player_name);
+                        $popupBox.hide();
+                        load_question(currentQuestion);
+                        $checkAns.on('click', check_answer);
+                    }
+
+                },
+                error: function (request, status, error) {
+
+                }
+            }); // End of ajax function:
+
         } else {
             $('#playername').val('');
         }
