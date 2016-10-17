@@ -93,6 +93,7 @@ class GenerateGame {
         $db = DB::getInstance();
         $pdo = $db->getConnection();
         $this->play_date = new DateTime("now", new DateTimeZone("America/Detroit"));
+        
         $this->play_date->modify("midnight");
         $this->query = 'UPDATE trivia_questions SET q_num=:q_num, play_date=:play_date, day_of_year=:day_of_year WHERE id=:id';
         $this->stmt = $pdo->prepare($this->query);
