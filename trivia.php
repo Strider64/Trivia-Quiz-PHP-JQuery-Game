@@ -28,16 +28,15 @@ President John R Pepp
     <head>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="css/stylesheet.css">
         <title>Pepster's Trivia Game</title>
+        <link rel="stylesheet" href="css/stylesheet.css">
+
     </head>
     <body>
 
         <header class="container headingStyle">
             <h2 class="logo"><span>Pepster's Place - Circle of Life</span> <a href="https://www.pepster.com"></a></h2>
-            <?php if ($user && $user->security_level === 'sysop') { ?>
-                <a class="iconBtn" href="trivia_maintenance.php"><img src="images/icon-maintenance.png" alt="maintenance-btn"></a>
-            <?php } ?>
+
             <?php if (!$user) { ?>
                 <a class="loginBtn" href="#"><img src="images/icon-login.png" alt="login-btn"></a>
             <?php } else { ?>

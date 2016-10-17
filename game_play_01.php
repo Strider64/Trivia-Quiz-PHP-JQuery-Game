@@ -16,7 +16,7 @@ $q_num = filter_input(INPUT_POST, 'current_question', FILTER_SANITIZE_FULL_SPECI
 if (isset($q_num) && $q_num) {
     $data = $game_play->readQA($q_num);
     if ($data) {
-        $output = json_encode($data[0]);
+        $output = $data[0];
         output($output);
     } else {
         $output = 'eof';
@@ -32,10 +32,9 @@ if (isset($id) && isset($answer)) {
     $result = $game_play->checkDailyTen($id, $answer);
 
     if ($result) {
-        $output = json_encode($result);
-        output($output);
+        output($result);
     } else {
-        $output = json_encode(['eof' => TRUE, 'message' => 'There are no more questions']);
+        $output = ['eof' => TRUE, 'message' => 'There are no more questions'];
         errorOutput($output, 410);
     }
 }
@@ -46,7 +45,7 @@ if (isset($id) && isset($answer)) {
 
 function errorOutput($output, $code = 500) {
     http_response_code($code);
-    echo $output;
+    echo json_encode($output);
 }
 
 /*
@@ -55,5 +54,5 @@ function errorOutput($output, $code = 500) {
 
 function output($output) {
     http_response_code(200);
-    echo $output;
+    echo json_encode($output);
 }
