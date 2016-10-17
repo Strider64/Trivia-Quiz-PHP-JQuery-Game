@@ -395,9 +395,9 @@ div.login {
   font-size: 13px;
   font-weight: normal;
   padding: 8px;
-  background: #b9c9fe;
+  background-color: #b9c9fe;
   border-top: 4px solid #aabcfe;
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid #FFFFFF;
   color: #039; }
 
 #highscoresTable th.highscoresHeading {
@@ -409,13 +409,13 @@ div.login {
 
 #highscoresTable td {
   padding: 8px;
-  background: #e8edff;
+  background-color: #e8edff;
   border-bottom: 1px solid #fff;
   color: #669;
   border-top: 1px solid transparent; }
 
 #highscoresTable tr:hover td {
-  background: #d0dafd;
+  background-color: #d0dafd;
   color: #339; }
 
 a.exitBtn {
