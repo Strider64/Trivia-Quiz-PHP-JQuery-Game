@@ -240,6 +240,19 @@ $(function () {
         event.preventDefault();
     });
 
+    $submitBtn.on('click', function (event) {
+        event.preventDefault();
+        player_name = $.trim($('#playername').val());
+        if (player_name !== '') {
+            console.log('player_name', player_name);
+            $popupBox.hide();
+            load_question(currentQuestion);
+            $checkAns.on('click', check_answer);
+        } else {
+            $('#playername').val('');
+        }
+    });
+
     function checkUser() {
         var params = {status: true};
         var myData = jQuery.param(params);
@@ -267,34 +280,26 @@ $(function () {
         }); // end of ajax function:
     }
 
-    checkUser();
-
-    $submitBtn.on('click', function (event) {
-        event.preventDefault();
-        player_name = $.trim($('#playername').val());
-        if (player_name !== '') {
-            var params = {check: true};
-            var myData = jQuery.param(params); // Set parameters to correct Ajax format:
-            $.ajax({
-                type: 'post',
-                url: 'generate_game.php',
-                data: myData,
-                success: function (info) {
-                    if (info) {
-                        console.log('player_name', player_name);
-                        $popupBox.hide();
-                        load_question(currentQuestion);
-                        $checkAns.on('click', check_answer);
-                    }
-
-                },
-                error: function (request, status, error) {
-
+    
+    function checkDatabaseTable() {
+        var params = {check: true};
+        var myData = jQuery.param(params); // Set parameters to correct Ajax format:
+        $.ajax({
+            type: 'post',
+            url: 'generate_game.php',
+            data: myData,
+            success: function (info) {
+                if (info) {
+                    checkUser();
                 }
-            }); // End of ajax function:
 
-        } else {
-            $('#playername').val('');
-        }
-    });
+            },
+            error: function (request, status, error) {
+
+            }
+        }); // End of ajax function:       
+    }
+    
+    checkDatabaseTable();
+    
 });  // End of Document Ready:  
