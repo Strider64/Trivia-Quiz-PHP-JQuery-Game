@@ -5,7 +5,7 @@ $(function () {
             $totalPts = $('.totalPoints'),
             timer = null,
             $timerAPI = $('.timer'),
-            duration = 30,
+            duration = 10,
             id = 1,
             correct = 0,
             score = 0,
@@ -82,8 +82,7 @@ $(function () {
         }, 1000); // End of SetInterval Function:
     } // end of Timer Function:
 
-    $timerAPI.css('color', 'green');
-    $timerAPI.text(duration);
+
     $nextBtn.hide();
 
     function reset_display(e) {
@@ -92,7 +91,8 @@ $(function () {
         $timerAPI.text(duration);
         $nextBtn.off('click', reset_display);
         $nextBtn.hide();
-        $checkAns.css('background-color', '#965E00');
+        $checkAns.css('background-color', '#aabcfe');
+        $checkAns.css('color', '#000');
         $checkAns.on('click', check_answer);
         load_question(currentQuestion);
 
@@ -169,11 +169,15 @@ $(function () {
                     correct += 1;
                     score = score + points;
                     $('.answer' + result.right_answer).css("background-color", "green");
+                    $('.answer' + result.right_answer).css("color", "#fff");
                 } else if (result.user_answer === 5) {
                     $('.answer' + result.right_answer).css("background-color", "green");
+                    $('.answer' + result.right_answer).css("color", "#fff");
                 } else if (result.user_answer <= 4) {
-                    score = score - (points / 4);
+                    score = Math.round(score - (points / 4));
+                    $('.answer' + result.right_answer).css("color", "#fff");
                     $('.answer' + result.right_answer).css("background-color", "green");
+                    $('.answer' + result.user_answer).css("color", "#fff");
                     $('.answer' + result.user_answer).css("background-color", "red");
                 }
                 displayScore(score);
@@ -236,7 +240,34 @@ $(function () {
         event.preventDefault();
     });
 
-    $popupBox.show();
+    function checkUser() {
+        var params = {status: true};
+        var myData = jQuery.param(params);
+        $.ajax({
+            type: 'post',
+            url: 'game_play_01.php',
+            data: myData,
+            success: function (info) {
+                console.log('info', info);
+                if (info.status) {
+                    player_name = info.username;
+                    duration = info.duration;
+                    points = info.points;
+                    load_question(currentQuestion);
+                    $checkAns.on('click', check_answer);
+                } else {
+                    $popupBox.show();
+                }
+                $timerAPI.css('color', 'green');
+                $timerAPI.text(duration);
+            },
+            error: function (request, status, error) {
+
+            }
+        }); // end of ajax function:
+    }
+
+    checkUser();
 
     $submitBtn.on('click', function (event) {
         event.preventDefault();
