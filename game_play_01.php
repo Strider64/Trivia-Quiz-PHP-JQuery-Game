@@ -7,9 +7,23 @@ use trivia_project\trivia_game\OutputQA;
 /* Makes it so we don't have to decode the json coming from JQuery */
 header('Content-type: application/json');
 
-
-
 $game_play = new OutputQA();
+
+$info = [];
+
+$status = filter_input(INPUT_POST, 'status', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+
+if ($status) {
+    if ($user) {
+        $info['status'] = true;
+        $info['username'] = $user->username;
+        $info['duration'] = 20;
+        $info['points'] = 250;
+    } else {
+        $info['status'] = false;
+    }
+    output($info);
+}
 
 $q_num = filter_input(INPUT_POST, 'current_question', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 
