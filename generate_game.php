@@ -5,11 +5,6 @@ require_once 'includes/utilities.inc.php';
 /* Makes it so we don't have to decode the json coming from JQuery */
 header('Content-type: application/json');
 
-if ($user && $user->security_level !== 'sysop') {
-    header("Location: trivia.php");
-    exit();
-}
-
 use trivia_project\trivia_game\GenerateGame as Generate;
 
 $check = filter_input(INPUT_POST, 'check', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
