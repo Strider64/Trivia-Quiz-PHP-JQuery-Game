@@ -1,7 +1,5 @@
 # Trivia-Quiz-PHP-JQuery-Game :point_left:
 
-<b>You will have to install PHPMailer yourself, for I didn't want to get into any copyright issues.  </b>
-
 <h1 style="color:blue;">Added Login Feature &amp; Improved Score October 19, 2016 :v:</h1>
 <p style="color:blue;">Added a Login Feature where you don't have to enter player name, increase time per question from 10 seconds to 20 seconds per question if login and increased points per question from 100 to 250 also if login.</p>
 
@@ -13,3 +11,5 @@ I originally wrote this game in Flash Actionscript 3.0 about 5 to 6 years ago an
 All the current games files and the respective directories can be found at Github. Feel free to use all of the files as is or with modifications, but all I ask is that you give me credit for the game itself. Just inserting the credit inside the code somewhere will be enough for me. Even if you don't use any of the code in your own project I hope this will help you out in the long run.
 
 My main website is <a href="https://www.pepster.com">https://www.pepster.com</a>
+
+<b>You will have to install PHPMailer yourself, for I didn't want to get into any copyright issues.  </b>
