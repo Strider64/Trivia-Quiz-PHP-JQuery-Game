@@ -1,6 +1,6 @@
 # Trivia-Quiz-PHP-JQuery-Game 
 
-<b>You will have to install PHPMailer yourself, for I didn't want to get into any copyright issues. </b>
+<b>You will have to install PHPMailer yourself, for I didn't want to get into any copyright issues. :v: </b>
 
 <h1 style="color:blue;">Added Login Feature &amp; Improved Score October 19, 2016</h1>
 <p style="color:blue;">Added a Login Feature where you don't have to enter player name, increase time per question from 10 seconds to 20 seconds per question if login and increased points per question from 100 to 250 also if login.</p>
