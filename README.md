@@ -3,7 +3,7 @@
 <h1 style="color:blue;">Added Login Feature &amp; Improved Score October 19, 2016 :v:</h1>
 <p style="color:blue;">Added a Login Feature where you don't have to enter player name, increase time per question from 10 seconds to 20 seconds per question if login and increased points per question from 100 to 250 also if login.</p>
 
-<h1 style="color:green;">Added a high scores feature on October 14, 2016</h1>
+<h1 style="color:green;">Added a high scores feature on October 14, 2016 :tophat:</h1>
 
 I am still tackling the login, registration and high scores features of this trivia game. The Login / Registration basically works, but as of right now it doesn't do anything useful. I haven't even begun the touch the high scores feature, but that should be realitively easy to implement. This one thing I liked with working with Flash was how easy it was to do the graphics for the game --- even if it is just simple graphics. Designing the trivia game with HTML and CSS kind of sucks.
 
