@@ -1,4 +1,4 @@
-# Trivia-Quiz-PHP-JQuery-Game :runner:
+# Trivia-Quiz-PHP-JQuery-Game :point_left:
 
 <b>You will have to install PHPMailer yourself, for I didn't want to get into any copyright issues.  </b>
 
