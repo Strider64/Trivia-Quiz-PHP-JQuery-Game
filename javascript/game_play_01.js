@@ -13,7 +13,7 @@ $(function () {
             bright_green = '#395870',
             $checkAns = $('.clicked'),
             $nextBtn = $('.nextBtn'),
-            $popupBox = $('.shadow'),
+            $popupBox = $('#highscores'),
             $submitBtn = $('.enterBtn'),
             $scoreVal = $('.scoreVal'),
             player_name = null,
@@ -203,6 +203,7 @@ $(function () {
     }
 
     function load_question(currentQuestion) {
+        $('.shadow').hide();
         var params = {current_question: currentQuestion}; // Set parameters:
         var myData = jQuery.param(params); // Set parameters to correct Ajax format:
         $.ajax({
@@ -245,7 +246,6 @@ $(function () {
         player_name = $.trim($('#playername').val());
         if (player_name !== '') {
             console.log('player_name', player_name);
-            $popupBox.hide();
             load_question(currentQuestion);
             $checkAns.on('click', check_answer);
         } else {
@@ -266,8 +266,12 @@ $(function () {
                     player_name = info.username;
                     duration = info.duration;
                     points = info.points;
-                    load_question(currentQuestion);
-                    $checkAns.on('click', check_answer);
+                    $('.startButton').css('display', 'block');
+                    $('.startButton').on('click', function (event) {
+                        event.preventDefault();
+                        load_question(currentQuestion);
+                        $checkAns.on('click', check_answer);
+                    });
                 } else {
                     $popupBox.show();
                 }
@@ -280,7 +284,7 @@ $(function () {
         }); // end of ajax function:
     }
 
-    
+
     function checkDatabaseTable() {
         var params = {check: true};
         var myData = jQuery.param(params); // Set parameters to correct Ajax format:
@@ -299,7 +303,7 @@ $(function () {
             }
         }); // End of ajax function:       
     }
-    
+
     checkDatabaseTable();
-    
+
 });  // End of Document Ready:  
