@@ -185,8 +185,8 @@ body {
 h2.logo {
   display: inline-block;
   position: absolute;
-  top: 10px;
-  left: 30px;
+  top: 40px;
+  left: 60px;
   width: 100%;
   max-width: 100px;
   height: 100px;
@@ -208,7 +208,10 @@ h2.logo {
 
 header.headingStyle {
   position: relative;
-  height: 120px;
+  height: 200px;
+  background-image: url(../images/bg-header-01.png);
+  background-repeat: no-repeat;
+  background-position: center;
   background-color: #000000;
   margin-top: 30px; }
   header.headingStyle h1 {
@@ -218,36 +221,31 @@ header.headingStyle {
     color: #FFFFFF;
     text-align: center; }
   header.headingStyle .logout {
-    -moz-border-radius: 20px;
-    -webkit-border-radius: 20px;
-    border-radius: 20px;
     position: absolute;
     right: 10px;
     bottom: 10px;
-    background-color: #FFFFFF;
-    padding: 20px; }
+    padding: 10px; }
     header.headingStyle .logout p.logoutTxt {
       font-family: Arial, Helvetica, sans-serif;
-      font-size: 1.2rem;
-      color: #000000; }
+      font-size: 1.4rem;
+      color: #FFFFFF; }
     header.headingStyle .logout span {
-      padding-left: 20px; }
+      padding-left: 10px; }
       header.headingStyle .logout span a.logoutLink {
         display: inline;
         font-family: Arial, Helvetica, sans-serif;
-        font-size: 1.2rem;
-        color: #174C4F;
-        font-weight: bold;
+        font-size: 1.0rem;
+        color: #FFFFFF;
         text-transform: capitalize;
         text-decoration: none; }
         header.headingStyle .logout span a.logoutLink:hover {
           color: magenta; }
   header.headingStyle a.loginBtn {
     position: absolute;
-    bottom: 20px;
-    right: 100px;
+    bottom: 10px;
+    right: 30px;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     color: #FFFFFF;
     text-decoration: none; }
     header.headingStyle a.loginBtn:hover {
@@ -285,11 +283,8 @@ header.headingStyle {
     header.headingStyle a.triviaBtn:hover {
       background-color: #E8CD5D; }
 
-#login {
-  background-color: #86C5DA; }
-
 div.login {
-  display: block;
+  display: none;
   width: 100%;
   max-width: 500px;
   height: auto;
@@ -360,6 +355,9 @@ div.login {
     div.login a:hover {
       color: #FC9E00; }
 
+/*******************************************
+HIGH SCORES TABLE CSS STYLING
+********************************************/
 .highscoresShadow {
   display: none;
   position: fixed;
@@ -443,6 +441,9 @@ a.exitBtn {
     background-color: #039;
     color: #b9c9fe; }
 
+/*******************************************
+REGISTRATION CSS STYLING
+********************************************/
 #register {
   -moz-border-radius: 8px;
   -webkit-border-radius: 8px;
@@ -537,6 +538,9 @@ div.maintenance {
       text-decoration: none;
       padding-left: 10px; }
 
+/*******************************************
+TRIVIA GAME CSS STYLING
+********************************************/
 div.mainContent {
   background-color: #f2f5e4;
   padding: 20px; }
@@ -562,6 +566,7 @@ div.mainContent {
         div.mainContent .gameDescription p.demoParagraph a:hover {
           color: #EF7261; }
   div.mainContent .gameBackground {
+    position: relative;
     background-color: #E8EDFF;
     height: 800px;
     padding: 20px; }
@@ -584,7 +589,7 @@ div.mainContent {
         -moz-border-radius: 20px;
         -webkit-border-radius: 20px;
         border-radius: 20px;
-        display: none;
+        display: block;
         position: absolute;
         top: 0;
         left: 0;
@@ -625,7 +630,7 @@ div.mainContent {
             -moz-border-radius: 8px;
             -webkit-border-radius: 8px;
             border-radius: 8px;
-            display: block;
+            display: none;
             width: 100%;
             max-width: 360px;
             height: 60px;
@@ -660,6 +665,35 @@ div.mainContent {
               margin: 0 10px; }
               div.mainContent .gameBackground .mainGame .shadow .startBox form#highscores input[type=submit]:hover {
                 background-color: #456dfd; }
+          div.mainContent .gameBackground .mainGame .shadow .startBox .startButton {
+            display: none;
+            width: 100%;
+            max-width: 100px;
+            height: 30px;
+            cursor: pointer;
+            background-color: #7894fd;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.2rem;
+            line-height: 30px;
+            color: #FFFFFF;
+            text-align: center;
+            text-decoration: none;
+            margin: 145px auto 0; }
+            div.mainContent .gameBackground .mainGame .shadow .startBox .startButton:hover {
+              background-color: #456dfd; }
+          div.mainContent .gameBackground .mainGame .shadow .startBox a.instructions {
+            position: absolute;
+            bottom: 10px;
+            left: 142px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.0rem;
+            text-align: center;
+            font-weight: bold;
+            text-decoration: none;
+            color: #2255fc;
+            margin: 0 auto; }
+            div.mainContent .gameBackground .mainGame .shadow .startBox a.instructions:hover {
+              color: #0332cf; }
       div.mainContent .gameBackground .mainGame div.quizHeading h1.quizTitle {
         -moz-border-radius: 20px;
         -webkit-border-radius: 20px;
@@ -670,7 +704,7 @@ div.mainContent {
         -moz-box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.9);
         -webkit-box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.9);
         box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.9);
-        background-color: #AABCFE;
+        background-color: #547bfd;
         font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
         font-size: 1.8rem;
         line-height: 1.2;
@@ -689,6 +723,7 @@ div.mainContent {
         -moz-box-shadow: inset 0 0 9px rgba(0, 0, 0, 0.5);
         -webkit-box-shadow: inset 0 0 9px rgba(0, 0, 0, 0.5);
         box-shadow: inset 0 0 9px rgba(0, 0, 0, 0.5);
+        position: relative;
         display: block;
         width: 100%;
         max-width: 100%;
