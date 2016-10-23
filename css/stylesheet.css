@@ -806,6 +806,16 @@ div.mainContent {
           div.mainContent .gameBackground .mainGame .nextBtnBox .nextBtn:hover {
             background-color: #006300; }
 
+.footer-style {
+  height: 50px;
+  background-color: #000000; }
+  .footer-style p.footer-text {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    line-height: 50px;
+    color: #3BE878;
+    text-align: center; }
+
 /* SMARTPHONE MEDIA QUERY STYLING */
 @media only screen and (max-width: 480px) {
   /* 480px = 30em */
