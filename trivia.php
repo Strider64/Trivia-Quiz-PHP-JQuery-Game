@@ -92,8 +92,5 @@ include 'includes/header.inc.php';
             </article>
 
         </div>
-        <script src="javascript/jquery-3.1.1.min.js"></script>
-        <script src="javascript/login_button.js"></script>
-        <script src="javascript/game_play_01.js"></script>
-    </body>
-</html>
+<?php
+        include 'includes/footer.inc.php';
