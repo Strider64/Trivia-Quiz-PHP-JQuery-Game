@@ -356,6 +356,28 @@ div.login {
       color: #FC9E00; }
 
 /*******************************************
+INSTRUCTIONS CSS STYLING
+********************************************/
+.help {
+  background-color: #F5E9BE; }
+  .help .helpStyle {
+    background-color: #FBFCF7;
+    padding: 30px; }
+    .help .helpStyle h1 {
+      font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+      font-size: 1.8rem;
+      line-height: 1.5; }
+    .help .helpStyle p {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 1.2rem;
+      line-height: 1.5; }
+    .help .helpStyle a {
+      text-decoration: none;
+      color: #299CA8; }
+      .help .helpStyle a:hover {
+        color: #395870; }
+
+/*******************************************
 HIGH SCORES TABLE CSS STYLING
 ********************************************/
 .highscoresShadow {
