@@ -248,6 +248,7 @@ $(function () {
             console.log('player_name', player_name);
             load_question(currentQuestion);
             $checkAns.on('click', check_answer);
+            scroll(0,0);
         } else {
             $('#playername').val('');
         }
@@ -269,6 +270,7 @@ $(function () {
                     $('.startButton').css('display', 'block');
                     $('.startButton').on('click', function (event) {
                         event.preventDefault();
+                        scroll(0,0);
                         load_question(currentQuestion);
                         $checkAns.on('click', check_answer);
                     });
