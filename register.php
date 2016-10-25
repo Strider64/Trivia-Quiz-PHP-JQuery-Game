@@ -39,8 +39,7 @@ President John R Pepp
     </head>
     <body>
         <header class="container headingStyle">
-            <h2 class="logo"><span>Pepster's Place - Circle of Life</span> <a href="https://www.pepster.com"></a></h2>
-            <a class="triviaBtn" href="trivia.php">Trivia Game</a>
+            <h2 class="logo"><span>Pepster's Place - Circle of Life</span> <a href="trivia.php"></a></h2>
         </header>
 
         <div class="container mainContent">
@@ -53,7 +52,9 @@ President John R Pepp
                     <input id="password" type="password" name="data[password]">
                     <label for="email">email</label>
                     <input id="email" type="text" name="data[email]" value="">
+                    <a class="triviaBtn" href="trivia.php">Trivia Game</a>
                     <input id="submit" type="submit" name="submit" value="enter">
+
                 </fieldset>
             </form>
         </div>
