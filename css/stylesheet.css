@@ -187,15 +187,173 @@ body {
   header.headingStyle {
     display: none; }
 
-  .span6 {
+  .span6, .span7 {
     width: 100%; }
 
   .login {
     display: none; }
 
-    /*******************************************
-HIGH SCORES TABLE CSS STYLING
-********************************************/
+  form#loginForm {
+    background-color: #536A93;
+    padding: 5px 10px; }
+    form#loginForm fieldset {
+      border: none; }
+    form#loginForm legend {
+      display: none; }
+    form#loginForm label {
+      clear: right;
+      display: block;
+      width: 100%;
+      height: 30px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 1.2rem;
+      line-height: 30px;
+      text-transform: capitalize;
+      color: #E8CD5D; }
+    form#loginForm input {
+      clear: right;
+      display: block;
+      width: 100%;
+      height: 30px;
+      background-color: #DEDDD8;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 1.2rem;
+      text-transform: capitalize;
+      color: #000000;
+      padding: 0 5px;
+      margin-bottom: 10px; }
+    form#loginForm input[type=submit] {
+      -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+      -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+      box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+      -moz-border-radius: 8px;
+      -webkit-border-radius: 8px;
+      border-radius: 8px;
+      border: none;
+      outline: none;
+      display: block;
+      width: 100%;
+      max-width: 100px;
+      height: 30px;
+      cursor: pointer;
+      background-color: #DEDDD8;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 1.2rem;
+      font-weight: bolder;
+      text-transform: capitalize;
+      color: #555555;
+      margin: 20px auto; }
+      form#loginForm input[type=submit]:hover {
+        background-color: #E8CD5D;
+        color: #3F4E70; }
+    form#loginForm a {
+      display: block;
+      width: 100%;
+      max-width: 100px;
+      height: 25px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 1.0rem;
+      line-height: 25px;
+      color: #E8CD5D;
+      font-weight: bolder;
+      text-align: center;
+      text-decoration: none;
+      margin: 5px auto; }
+      form#loginForm a:hover {
+        color: #FC9E00; }
+
+  /*******************************************
+  REGISTRATION CSS STYLING
+  ********************************************/
+  #register {
+    background-color: #536A93;
+    padding: 5px 10px; }
+    #register fieldset {
+      border: none; }
+      #register fieldset legend {
+        display: none; }
+      #register fieldset label {
+        clear: right;
+        display: block;
+        width: 100%;
+        height: 30px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.2rem;
+        line-height: 30px;
+        text-transform: capitalize;
+        color: #E8CD5D; }
+      #register fieldset input {
+        clear: right;
+        display: block;
+        width: 100%;
+        height: 30px;
+        background-color: #DEDDD8;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.2rem;
+        text-transform: capitalize;
+        color: #000000;
+        padding: 0 5px;
+        margin-bottom: 10px; }
+      #register fieldset input[type=submit] {
+        border: none;
+        outline: none;
+        display: block;
+        width: 100%;
+        max-width: 100px;
+        height: 30px;
+        cursor: pointer;
+        background-color: #DEDDD8;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.2rem;
+        font-weight: bolder;
+        text-transform: capitalize;
+        color: #555555;
+        margin: 20px auto; }
+        #register fieldset input[type=submit]:hover {
+          background-color: #E8CD5D;
+          color: #3F4E70; }
+      #register fieldset a {
+        display: block;
+        width: 100%;
+        max-width: 120px;
+        height: 30px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.0rem;
+        line-height: 30px;
+        color: #E8CD5D;
+        background-color: #3F4E70;
+        font-weight: bolder;
+        text-align: center;
+        text-decoration: none;
+        margin: 5px auto; }
+        #register fieldset a:hover {
+          color: #FC9E00; }
+
+  /*******************************************
+  INSTRUCTIONS CSS STYLING
+  ********************************************/
+  .help {
+    background-color: #F5E9BE; }
+    .help .helpStyle {
+      background-color: #FBFCF7;
+      padding: 5px; }
+      .help .helpStyle h1 {
+        font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+        font-size: 1.4rem;
+        line-height: 1.5; }
+      .help .helpStyle p {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.0rem;
+        line-height: 1.5; }
+      .help .helpStyle a {
+        text-decoration: none;
+        color: #299CA8; }
+        .help .helpStyle a:hover {
+          color: #395870; }
+
+  /*******************************************
+  HIGH SCORES TABLE CSS STYLING
+  ********************************************/
   .highscoresShadow {
     display: none;
     position: fixed;
@@ -281,6 +439,29 @@ HIGH SCORES TABLE CSS STYLING
 
   div.mainContent {
     background-color: #FFFFFF; }
+    div.mainContent .gameDescription {
+      background-color: #FFFFFF;
+      height: auto;
+      padding: 20px; }
+      div.mainContent .gameDescription hr, div.mainContent .gameDescription br {
+        display: none; }
+      div.mainContent .gameDescription h6.demoHeading {
+        font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+        font-size: 1.2rem;
+        line-height: 1.5;
+        color: #000000; }
+      div.mainContent .gameDescription p.demoParagraph {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.0rem;
+        line-height: 1.5;
+        color: #000000; }
+        div.mainContent .gameDescription p.demoParagraph a {
+          font-size: 1.2rem;
+          text-decoration: none;
+          font-weight: bold;
+          color: #3F4E70; }
+          div.mainContent .gameDescription p.demoParagraph a:hover {
+            color: #EF7261; }
     div.mainContent .gameBackground {
       position: relative;
       display: block;
@@ -323,6 +504,43 @@ HIGH SCORES TABLE CSS STYLING
             line-height: 1.5;
             color: #1345fc;
             text-align: center; }
+          div.mainContent .gameBackground .shadow .startBox .logout {
+            margin-top: 20px; }
+            div.mainContent .gameBackground .shadow .startBox .logout p.logoutTxt {
+              font-family: Arial, Helvetica, sans-serif;
+              font-size: 1.2rem;
+              line-height: 30px;
+              color: #1345fc;
+              text-align: center; }
+            div.mainContent .gameBackground .shadow .startBox .logout span {
+              clear: both;
+              display: block;
+              width: 100%;
+              max-width: 120px;
+              height: 30px;
+              margin: 0 auto; }
+              div.mainContent .gameBackground .shadow .startBox .logout span a.logoutLink {
+                color: #1345fc;
+                text-decoration: none;
+                text-transform: capitalize; }
+                div.mainContent .gameBackground .shadow .startBox .logout span a.logoutLink:hover {
+                  color: #7895ff; }
+          div.mainContent .gameBackground .shadow .startBox a.loginBtn {
+            position: relative;
+            top: 30px;
+            display: block;
+            width: 100%;
+            max-width: 90px;
+            height: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.2rem;
+            line-height: 30px;
+            color: #1345fc;
+            text-align: center;
+            text-decoration: none;
+            margin: 0 auto; }
+            div.mainContent .gameBackground .shadow .startBox a.loginBtn:hover {
+              color: #7895ff; }
           div.mainContent .gameBackground .shadow .startBox form#highscores {
             display: none;
             width: 100%;
@@ -331,7 +549,7 @@ HIGH SCORES TABLE CSS STYLING
             background-color: #AABCFE;
             text-align: center;
             line-height: 60px;
-            margin: 190px auto 0; }
+            margin: 140px auto 0; }
             div.mainContent .gameBackground .shadow .startBox form#highscores label {
               font-family: Arial, Helvetica, sans-serif;
               color: #1345fc;
@@ -372,7 +590,7 @@ HIGH SCORES TABLE CSS STYLING
             color: #FFFFFF;
             text-align: center;
             text-decoration: none;
-            margin: 160px auto 0; }
+            margin: 120px auto 0; }
             div.mainContent .gameBackground .shadow .startBox .startButton:hover {
               background-color: #456dfd; }
           div.mainContent .gameBackground .shadow .startBox a.instructions {
@@ -467,7 +685,17 @@ HIGH SCORES TABLE CSS STYLING
           font-weight: bold;
           color: #FFFFFF; }
           div.mainContent .gameBackground .nextBtnBox .nextBtn:hover {
-            background-color: #006300; } }
+            background-color: #006300; }
+
+  .footer-style {
+    height: 30px;
+    background-color: #000000; }
+    .footer-style p.footer-text {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 1.0rem;
+      line-height: 30px;
+      color: #3BE878;
+      text-align: center; } }
 /* TABLET MEDIA QUERY STYLING */
 @media only screen and (min-width: 481px) and (max-width: 1020px) {
   /* 481px = 30.063em & 768px = 48em */ }
@@ -512,44 +740,6 @@ HIGH SCORES TABLE CSS STYLING
       line-height: 200px;
       color: #FFFFFF;
       text-align: center; }
-    header.headingStyle .logout {
-      position: absolute;
-      right: 10px;
-      top: 0px;
-      padding: 10px; }
-      header.headingStyle .logout p.logoutTxt {
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 1.0rem;
-        color: #FFFFFF; }
-      header.headingStyle .logout span {
-        padding-left: 10px; }
-        header.headingStyle .logout span a.logoutLink {
-          display: inline;
-          font-family: Arial, Helvetica, sans-serif;
-          font-size: 1.0rem;
-          color: #FFFFFF;
-          text-transform: capitalize;
-          text-decoration: none; }
-          header.headingStyle .logout span a.logoutLink:hover {
-            color: magenta; }
-    header.headingStyle a.loginBtn {
-      position: absolute;
-      top: 10px;
-      right: 30px;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 1.2rem;
-      color: #FFFFFF;
-      text-decoration: none; }
-      header.headingStyle a.loginBtn:hover {
-        color: #FFE184; }
-    header.headingStyle a.iconBtn {
-      position: absolute;
-      top: 0;
-      right: 300px; }
-      header.headingStyle a.iconBtn img {
-        width: 100%;
-        max-width: 75%;
-        height: 75%; }
     header.headingStyle a.triviaBtn {
       -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
       -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
@@ -646,6 +836,90 @@ HIGH SCORES TABLE CSS STYLING
       text-decoration: none; }
       div.login a:hover {
         color: #FC9E00; }
+
+  /*******************************************
+  REGISTRATION CSS STYLING
+  ********************************************/
+  #register {
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    background-color: #2e2e2e;
+    padding: 20px 30px; }
+    #register fieldset {
+      -moz-border-radius: 8px;
+      -webkit-border-radius: 8px;
+      border-radius: 8px;
+      border: 2px solid #E8CD5D;
+      padding: 25px; }
+      #register fieldset legend {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.8rem;
+        color: #E8CD5D;
+        padding: 0 5px; }
+      #register fieldset label {
+        float: left;
+        display: block;
+        width: 100%;
+        max-width: 260px;
+        height: 30px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.2rem;
+        line-height: 30px;
+        text-align: right;
+        text-transform: capitalize;
+        color: #E8CD5D;
+        background-color: #3F4E70;
+        padding-right: 10px; }
+      #register fieldset input {
+        clear: right;
+        display: block;
+        outline: none;
+        border: none;
+        width: 100%;
+        max-width: 260px;
+        height: 30px;
+        background-color: #E8CD5D;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.2rem;
+        color: #3F4E70;
+        padding: 0 5px;
+        margin-bottom: 10px; }
+      #register fieldset a {
+        float: left;
+        display: block;
+        width: 100%;
+        max-width: 120px;
+        height: 30px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.0rem;
+        line-height: 30px;
+        color: #E8CD5D;
+        background-color: #3F4E70;
+        font-weight: bolder;
+        text-align: center;
+        text-decoration: none;
+        margin: 5px 10px 5px 290px; }
+        #register fieldset a:hover {
+          color: #FC9E00; }
+      #register fieldset input[type=submit] {
+        border: none;
+        outline: none;
+        float: left;
+        display: block;
+        width: 100%;
+        max-width: 100px;
+        height: 30px;
+        cursor: pointer;
+        background-color: #3F4E70;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.0rem;
+        font-weight: bold;
+        text-transform: capitalize;
+        color: #E8CD5D;
+        margin: 5px auto; }
+        #register fieldset input[type=submit]:hover {
+          background-color: #FC9E00; }
 
   /*******************************************
   INSTRUCTIONS CSS STYLING
@@ -754,78 +1028,6 @@ HIGH SCORES TABLE CSS STYLING
     a.exitBtn:hover {
       background-color: #039;
       color: #b9c9fe; }
-
-  /*******************************************
-  REGISTRATION CSS STYLING
-  ********************************************/
-  #register {
-    -moz-border-radius: 8px;
-    -webkit-border-radius: 8px;
-    border-radius: 8px;
-    background-color: #2e2e2e;
-    padding: 20px 30px; }
-    #register fieldset {
-      -moz-border-radius: 8px;
-      -webkit-border-radius: 8px;
-      border-radius: 8px;
-      border: 2px solid #FFFFFF;
-      padding: 25px; }
-      #register fieldset legend {
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 1.8rem;
-        color: #FFFFFF;
-        padding: 0 5px; }
-      #register fieldset label {
-        float: left;
-        display: block;
-        width: 100%;
-        max-width: 260px;
-        height: 30px;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 1.2rem;
-        line-height: 30px;
-        text-align: right;
-        text-transform: capitalize;
-        color: #000000;
-        background-color: #FFFFFF;
-        padding-right: 10px; }
-      #register fieldset input {
-        clear: right;
-        display: block;
-        outline: none;
-        border: none;
-        width: 100%;
-        max-width: 260px;
-        height: 30px;
-        background-color: #E8CD5D;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 1.2rem;
-        padding: 0 5px;
-        margin-bottom: 10px; }
-      #register fieldset input[type=submit] {
-        -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
-        -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
-        box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
-        -moz-border-radius: 8px;
-        -webkit-border-radius: 8px;
-        border-radius: 8px;
-        border: none;
-        outline: none;
-        float: right;
-        display: block;
-        width: 100%;
-        max-width: 100px;
-        height: 30px;
-        cursor: pointer;
-        background-color: #FFFFFF;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 1.0rem;
-        font-weight: bold;
-        text-transform: capitalize;
-        color: #000000;
-        margin: 15px 50px; }
-        #register fieldset input[type=submit]:hover {
-          background-color: #E8CD5D; }
 
   div.maintenance {
     background-color: #68D693;
@@ -940,6 +1142,43 @@ HIGH SCORES TABLE CSS STYLING
               line-height: 1.5;
               color: #1345fc;
               text-align: center; }
+            div.mainContent .gameBackground .mainGame .shadow .startBox .logout {
+              margin-top: 20px; }
+              div.mainContent .gameBackground .mainGame .shadow .startBox .logout p.logoutTxt {
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 1.2rem;
+                line-height: 30px;
+                color: #1345fc;
+                text-align: center; }
+              div.mainContent .gameBackground .mainGame .shadow .startBox .logout span {
+                clear: both;
+                display: block;
+                width: 100%;
+                max-width: 120px;
+                height: 30px;
+                margin: 0 auto; }
+                div.mainContent .gameBackground .mainGame .shadow .startBox .logout span a.logoutLink {
+                  color: #1345fc;
+                  text-decoration: none;
+                  text-transform: capitalize; }
+                  div.mainContent .gameBackground .mainGame .shadow .startBox .logout span a.logoutLink:hover {
+                    color: #7895ff; }
+            div.mainContent .gameBackground .mainGame .shadow .startBox a.loginBtn {
+              position: relative;
+              top: 30px;
+              display: block;
+              width: 100%;
+              max-width: 90px;
+              height: 30px;
+              font-family: Arial, Helvetica, sans-serif;
+              font-size: 1.2rem;
+              line-height: 30px;
+              color: #1345fc;
+              text-align: center;
+              text-decoration: none;
+              margin: 0 auto; }
+              div.mainContent .gameBackground .mainGame .shadow .startBox a.loginBtn:hover {
+                color: #7895ff; }
             div.mainContent .gameBackground .mainGame .shadow .startBox form#highscores {
               -moz-border-radius: 8px;
               -webkit-border-radius: 8px;
@@ -951,7 +1190,7 @@ HIGH SCORES TABLE CSS STYLING
               background-color: #AABCFE;
               text-align: center;
               line-height: 60px;
-              margin: 145px auto 0; }
+              margin: 100px auto 0; }
               div.mainContent .gameBackground .mainGame .shadow .startBox form#highscores label {
                 font-family: Arial, Helvetica, sans-serif;
                 color: #1345fc;
@@ -992,20 +1231,22 @@ HIGH SCORES TABLE CSS STYLING
               color: #FFFFFF;
               text-align: center;
               text-decoration: none;
-              margin: 145px auto 0; }
+              margin: 100px auto 0; }
               div.mainContent .gameBackground .mainGame .shadow .startBox .startButton:hover {
                 background-color: #456dfd; }
             div.mainContent .gameBackground .mainGame .shadow .startBox a.instructions {
-              position: absolute;
-              bottom: 10px;
-              left: 142px;
+              display: block;
+              width: 100%;
+              max-width: 120px;
+              height: 25px;
               font-family: Arial, Helvetica, sans-serif;
               font-size: 1.0rem;
+              line-height: 25px;
               text-align: center;
               font-weight: bold;
               text-decoration: none;
               color: #2255fc;
-              margin: 0 auto; }
+              margin: 15px auto 0; }
               div.mainContent .gameBackground .mainGame .shadow .startBox a.instructions:hover {
                 color: #0332cf; }
         div.mainContent .gameBackground .mainGame div.quizHeading h1.quizTitle {
