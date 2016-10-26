@@ -12,7 +12,7 @@ $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_FULL_SPECIAL_CH
 if (isset($username) && isset($password)) {
     $result = $member->read($username, $password);
     if ($result) {
-        header("Location: trivia.php");
+        header("Location: index.php");
         exit();
     }
 }

@@ -9,6 +9,6 @@ $logout = new Users();
 $result = $logout->delete();
 
 if ($result) {
-    header("Location: trivia.php");
+    header("Location: index.php");
     exit();
 }
