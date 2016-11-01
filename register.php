@@ -48,7 +48,7 @@ include 'includes/header.inc.php';
             <input id="password" type="password" name="data[password]">
             <label for="email"><?php echo (isset($resultArray) && $resultArray['validEmail'] === false) ? "Invalid Email, re-enter!" : "email"; ?></label>
             <input id="email" type="text" name="data[email]" value="">
-            <div class="g-recaptcha" data-sitekey="6Lc71goUAAAAAKj8IWRHTruaDezF4eL8QhG9u9Zr"></div>
+            <div class="g-recaptcha" data-sitekey="your_public_key"></div>
             <a class="triviaBtn" href="index.php">Trivia Game</a>                    
             <?php echo (isset($resultArray) && !is_array($resultArray)) ? NULL : '<input id="submit" type="submit" name="submit" value="enter">'; ?>
 
