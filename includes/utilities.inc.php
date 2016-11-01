@@ -11,6 +11,14 @@ $minutes = 60;
 $hours = 24;
 $days = 14;
 
+header("Content-Type: text/html; charset=utf-8");
+header('X-Frame-Options: SAMEORIGIN'); // Prevent Clickjacking:
+header('X-Content-Type-Options: nosniff');
+header('x-xss-protection: 1; mode=block');
+header('Strict-Transport-Security: max-age=31536000; includeSubDomains');
+//header("content-security-policy: default-src 'self'; report-uri /csp_report_parser");
+header('X-Permitted-Cross-Domain-Policies: master-only');
+
 session_set_cookie_params($seconds * $minutes * $hours * $days, "");
 session_start();
 
