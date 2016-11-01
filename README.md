@@ -1,5 +1,6 @@
 # Trivia-Quiz-PHP-JQuery-Game :point_left:
-
+<h1>Improved Security and Improved Registration November 1, 2016</h1>
+<p>Added security in the utilities.inc.php file and in the process of improving registration in the register.php file.</p>
 <h1 style="color:blue;">Added Login Feature &amp; Improved Score October 19, 2016 :v:</h1>
 <p style="color:blue;">Added a Login Feature where you don't have to enter player name, increase time per question from 10 seconds to 20 seconds per question if login and increased points per question from 100 to 250 also if login.</p>
 
