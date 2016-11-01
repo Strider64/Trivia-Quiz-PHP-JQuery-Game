@@ -8,6 +8,7 @@ define('EMAIL_USERNAME', 'email_username');
 define('EMAIL_PASSWORD', 'email_password');
 define('EMAIL_ADDRESS', 'john.smith@example.com');
 define('EMAIL_PORT', 587);
+define('PRIVATE_KEY', 'your_private_key');
 if (filter_input(INPUT_SERVER, 'SERVER_NAME', FILTER_SANITIZE_URL) == "localhost") {
     define('DATABASE_HOST', 'localhost');
     define('DATABASE_NAME', 'database name');
